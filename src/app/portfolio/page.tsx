@@ -9,46 +9,32 @@ export const metadata: Metadata = {
 
 const projects = [
     {
-        title: 'Sistem Informasi Akademik',
-        category: 'Web App',
-        desc: 'Platform manajemen sekolah terintegrasi dengan modul kesiswaan dan keuangan.',
+        title: 'Platform Jual Ebook Digital',
+        category: 'E-Commerce',
+        desc: 'Marketplace modern untuk penjualan produk digital ebook dengan sistem pembayaran otomatis dan delivery instan.',
         img: '/image/web1.webp',
-        tech: ['Laravel', 'MySQL']
+        tech: ['Next.js', 'Stripe', 'Supabase']
     },
     {
-        title: 'E-Commerce Fashion',
-        category: 'Web Development',
-        desc: 'Toko online modern dengan fitur multi-vendor dan payment gateway.',
+        title: 'Platform Kursus Online',
+        category: 'LMS / EdTech',
+        desc: 'Sistem manajemen pembelajaran lengkap dengan fitur video streaming, kuis interaktif, dan sertifikat otomatis.',
         img: '/image/web2.webp',
-        tech: ['Laravel', 'MySQL']
+        tech: ['React', 'Node.js', 'MongoDB']
     },
     {
-        title: 'AI Analytics Dashboard',
-        category: 'Web App',
-        desc: 'Dashboard analitik data realtime dengan prediksi berbasis AI.',
+        title: 'GMap Contact Scraper',
+        category: 'Data Mining Tool',
+        desc: 'Aplikasi web untuk ekstraksi data kontak bisnis dari Google Maps secara massal untuk kebutuhan lead generation.',
         img: '/image/web3.webp',
-        tech: ['Next.js', 'PostgreSQL', 'Python']
+        tech: ['Python', 'Selenium', 'FastAPI']
     },
     {
-        title: 'Company Profile BUMN',
-        category: 'Web Development',
-        desc: 'Website korporat profesional dengan CMS custom untuk pengelolaan konten.',
+        title: 'AI Ebook Generator',
+        category: 'AI Application',
+        desc: 'Tools produktivitas yang memanfaatkan AI untuk membuat konten ebook lengkap dari outline hingga layout dalam hitungan menit.',
         img: '/image/web4.webp',
-        tech: ['Laravel', 'MySQL']
-    },
-    {
-        title: 'Movie Streaming Platform',
-        category: 'Web App',
-        desc: 'Website nonton film dengan fitur streaming adaptif dan subscription membership.',
-        img: '/image/web5.webp',
-        tech: ['Next.js']
-    },
-    {
-        title: 'IPTV Web Player',
-        category: 'Web App',
-        desc: 'Aplikasi web player IPTV dengan dukungan multi-playlist dan EPG realtime.',
-        img: '/image/web6.webp',
-        tech: ['Next.js']
+        tech: ['Next.js', 'OpenAI API', 'Tailwind CSS']
     },
 ];
 
