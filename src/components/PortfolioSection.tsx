@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ArrowRight } from 'lucide-react';
-import { portfolioItems, categories } from '@/data/portfolio';
+// Data fetching handled via API from database
 
 interface PortfolioSectionProps {
     title?: string;
@@ -24,16 +24,46 @@ export default function PortfolioSection({
     bgClass = "bg-gray-50 dark:bg-zinc-950",
     showFooterLink = true
 }: PortfolioSectionProps) {
+    const [items, setItems] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState("All");
 
+    useEffect(() => {
+        const fetchPortfolios = async () => {
+            try {
+                const res = await fetch('/api/portfolios');
+                if (res.ok) {
+                    const data = await res.json();
+                    setItems(data);
+                }
+            } catch (error) {
+                console.error('Error fetching portfolios:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchPortfolios();
+    }, []);
+
     const filteredItems = activeCategory === "All"
-        ? portfolioItems
-        : portfolioItems.filter(item => item.category === activeCategory);
+        ? items
+        : items.filter(item => item.category === activeCategory);
 
     const displayItems = limit ? filteredItems.slice(0, limit) : filteredItems;
 
+    if (loading) {
+        return (
+            <section className={`pt-4 pb-16 md:pt-1 md:pb-5 overflow-hidden ${bgClass}`} id="portfolio">
+                <div className="container mx-auto px-4 text-center py-20">
+                    <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+                    <p className="mt-4 text-gray-500 font-bold uppercase tracking-widest text-xs">Memuat Portfolio...</p>
+                </div>
+            </section>
+        );
+    }
+
     return (
-        <section className={`pt-1 pb-16 md:pt-1 md:pb-5 overflow-hidden ${bgClass}`} id="portfolio">
+        <section className={`pt-1 pb-16 md:pt-10 md:pb-8 overflow-hidden ${bgClass}`} id="portfolio">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-8 md:mb-12">
                     <motion.h2
@@ -56,12 +86,12 @@ export default function PortfolioSection({
 
                     {showFilter && (
                         <div className="flex justify-center mb-12">
-                            <div className="inline-flex p-1 bg-gray-200/50 dark:bg-zinc-800/50 rounded-2xl border border-gray-200 dark:border-zinc-800 backdrop-blur-sm">
-                                {categories.map((cat) => (
+                            <div className="inline-flex p-1 bg-gray-200/50 dark:bg-zinc-800/50 rounded-2xl border border-gray-200 dark:border-zinc-800 backdrop-blur-sm overflow-x-auto max-w-full">
+                                {["All", ...Array.from(new Set(items.map(i => i.category)))].map((cat) => (
                                     <button
                                         key={cat}
                                         onClick={() => setActiveCategory(cat)}
-                                        className={`px-6 py-2.5 rounded-xl text-xs font-black transition-all duration-300 ${activeCategory === cat
+                                        className={`px-6 py-2.5 rounded-xl text-xs font-black transition-all duration-300 whitespace-nowrap ${activeCategory === cat
                                             ? "bg-white dark:bg-zinc-800 text-blue-600 shadow-md transform scale-105"
                                             : "text-gray-500 hover:text-gray-900 dark:hover:text-white"
                                             }`}
@@ -92,7 +122,7 @@ export default function PortfolioSection({
                                 <div className="relative h-64 overflow-hidden rounded-[1.5rem] border-2 border-gray-50 dark:border-zinc-800 shadow-inner">
                                     <Image
                                         src={item.image}
-                                        alt={item.title}
+                                        alt={item.image_alt || item.title}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

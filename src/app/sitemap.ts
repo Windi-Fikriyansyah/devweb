@@ -1,56 +1,26 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://Webkite.com'; // Change to actual domain
+const baseUrl = 'https://Webkite.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    return [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 1,
-        },
-        {
-            url: `${baseUrl}/services`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/mobile-app`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/services/web`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/services/web-app`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/portfolio`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
-            url: `${baseUrl}/blog`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7,
-        },
-        {
-            url: `${baseUrl}/contact`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.5,
-        },
+    const routes = [
+        '',
+        '/about',
+        '/portfolio',
+        '/pricing',
+        '/blog',
+        '/contact',
+        '/services/company-profile',
+        '/services/landing-page',
+        '/jasa-pembuatan-website-pontianak',
+        '/jasa-toko-online-pontianak',
+        '/jasa-website-ekspor-pontianak',
     ];
+
+    return routes.map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: route === '' ? 'yearly' : 'monthly',
+        priority: route === '' ? 1 : 0.8,
+    }));
 }

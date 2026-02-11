@@ -9,8 +9,15 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Pontianak | Spesialis Ekspor & E-commerce | Webkite",
+  metadataBase: new URL("https://Webkite.com"),
+  title: {
+    default: "Jasa Pembuatan Website Pontianak | Webkite",
+    template: "%s | Webkite"
+  },
   description: "Jasa pembuatan website profesional di Pontianak. Spesialis website Ekspor berstandar global, Toko Online otomatis, dan profil bisnis untuk segala jenis industri.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",
@@ -26,9 +33,50 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Webkite Pontianak",
+    "image": "https://Webkite.com/image/agmr.webp",
+    "@id": "https://Webkite.com",
+    "url": "https://Webkite.com",
+    "telephone": "+6289678386070",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Teuku Umar",
+      "addressLocality": "Pontianak",
+      "addressRegion": "Kalimantan Barat",
+      "postalCode": "78117",
+      "addressCountry": "ID"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -0.0263,
+      "longitude": 109.3425
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": "https://wa.me/6289678386070"
+  };
+
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${inter.className} min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main className="flex-grow pt-16">
           {children}

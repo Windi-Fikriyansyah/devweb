@@ -4,6 +4,9 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 export const metadata: Metadata = {
     title: "Hubungi Kami | Webkite",
     description: "Konsultasikan kebutuhan digital Anda gratis. Hubungi kami via WhatsApp, Email, atau kunjungi kantor kami.",
+    alternates: {
+        canonical: "/contact",
+    },
 };
 
 export default function ContactPage() {
