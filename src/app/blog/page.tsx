@@ -1,98 +1,95 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+import db from '@/lib/db';
 
-export const metadata: Metadata = {
-    title: "Blog Teknologi & Bisnis Digital | DevStudio",
-    description: "Insight terbaru seputar pengembangan website, mobile apps, startup, dan strategi bisnis digital.",
-};
-
-const posts = [
-    {
-        title: 'Mengapa Next.js Lebih Baik dari WordPress untuk Bisnis Skala Besar?',
-        excerpt: 'Pelajari keunggulan performa, keamanan, dan skalabilitas Next.js dibandingkan CMS tradisional.',
-        date: '12 Jan 2024',
-        category: 'Technology',
-        readTime: '5 min read'
-    },
-    {
-        title: 'React Native vs Flutter: Mana yang Harus Anda Pilih di 2024?',
-        excerpt: 'Perbandingan mendalam dua framework cross-platform terpopuler untuk pengembangan aplikasi mobile.',
-        date: '08 Jan 2024',
-        category: 'Mobile Dev',
-        readTime: '7 min read'
-    },
-    {
-        title: '5 Fitur Wajib Aplikasi E-Commerce untuk Meningkatkan Konversi',
-        excerpt: 'Jangan lewatkan fitur-fitur krusial ini jika Anda ingin membangun toko online yang sukses.',
-        date: '03 Jan 2024',
-        category: 'Business',
-        readTime: '4 min read'
-    },
-    {
-        title: 'Pentingnya UI/UX Design dalam Membangun Brand Digital',
-        excerpt: 'Desain bukan sekadar estetika, tapi tentang bagaimana user berinteraksi dengan produk Anda.',
-        date: '28 Dec 2023',
-        category: 'Design',
-        readTime: '6 min read'
-    },
-    {
-        title: 'Mengenal SEO Technical: Cara Agar Website Anda Disukai Google',
-        excerpt: 'Panduan dasar optimasi teknis website agar mudah di-crawl dan di-index oleh search engine.',
-        date: '20 Dec 2023',
-        category: 'SEO',
-        readTime: '8 min read'
-    },
-    {
-        title: 'Biaya Pembuatan Aplikasi Mobile Premium: Breakdown Lengkap',
-        excerpt: 'Transparansi komponen biaya dalam pengembangan aplikasi mobile profesional.',
-        date: '15 Dec 2023',
-        category: 'Guide',
-        readTime: '5 min read'
+// This is a Server Component by default in Next.js App Router
+async function getArticles() {
+    try {
+        const [rows] = await db.query('SELECT * FROM articles ORDER BY created_at DESC');
+        return rows as any[];
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+        return [];
     }
-];
+}
 
-export default function BlogPage() {
+export default async function BlogPage() {
+    const articles = await getArticles();
+
     return (
-        <div className="bg-white dark:bg-black min-h-screen pt-24 pb-16">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Blog & Insight</h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
-                        Artikel pilihan untuk menambah wawasan teknologi dan bisnis digital Anda.
+        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-zinc-950 dark:to-black pt-12 pb-24">
+            <div className="container mx-auto px-4 max-w-6xl">
+                {/* Header Section */}
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 uppercase tracking-tighter">
+                        Digital <span className="text-blue-600">Insights</span>
+                    </h1>
+                    <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                        Temukan artikel terbaru seputar teknologi, bisnis ekspor, e-commerce, dan tips digital marketing untuk UMKM di Pontianak.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {posts.map((post, i) => (
-                        <article key={i} className="flex flex-col bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300">
-                            {/* Dummy Thumbnail Image */}
-                            <div className="h-48 bg-gray-200 dark:bg-gray-800 relative">
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">
-                                    Article Thumbnail
+                {articles.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {articles.map((article) => (
+                            <div
+                                key={article.id}
+                                className="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-zinc-800 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2"
+                            >
+                                {/* Image Wrapper */}
+                                <div className="relative h-56 overflow-hidden">
+                                    <Image
+                                        src={article.image_url || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800'}
+                                        alt={article.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute top-4 left-4">
+                                        <span className="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                                            {article.category}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Content Section */}
+                                <div className="p-8">
+                                    <div className="flex items-center gap-4 text-gray-500 dark:text-gray-400 text-xs mb-4 font-bold uppercase tracking-wider">
+                                        <div className="flex items-center gap-1.5">
+                                            <Calendar className="w-3.5 h-3.5" />
+                                            {new Date(article.created_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                        </div>
+                                        <div className="flex items-center gap-1.5">
+                                            <User className="w-3.5 h-3.5" />
+                                            {article.author}
+                                        </div>
+                                    </div>
+
+                                    <h2 className="text-xl font-black text-gray-900 dark:text-white mb-4 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                                        {article.title}
+                                    </h2>
+
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
+                                        {article.excerpt}
+                                    </p>
+
+                                    <Link
+                                        href={`/blog/${article.slug}`}
+                                        className="inline-flex items-center text-blue-600 font-black text-xs uppercase tracking-[0.2em] group-hover:gap-3 transition-all"
+                                    >
+                                        Baca Selengkapnya <ArrowRight className="w-4 h-4" />
+                                    </Link>
                                 </div>
                             </div>
-
-                            <div className="p-6 flex-grow flex flex-col">
-                                <div className="flex items-center text-xs text-blue-600 dark:text-blue-400 mb-3 space-x-2">
-                                    <span className="font-bold uppercase tracking-wider">{post.category}</span>
-                                    <span className="text-gray-300">•</span>
-                                    <span className="text-gray-500">{post.readTime}</span>
-                                </div>
-                                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 transition-colors cursor-pointer">
-                                    <Link href="#">{post.title}</Link>
-                                </h2>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
-                                    {post.excerpt}
-                                </p>
-                                <div className="mt-auto text-xs text-gray-500 pt-4 border-t border-gray-100 dark:border-gray-800">
-                                    Diposting pada {post.date}
-                                </div>
-                            </div>
-                        </article>
-                    ))}
-                </div>
-
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center py-24 bg-white dark:bg-zinc-900 rounded-[3rem] border border-dashed border-gray-200 dark:border-zinc-800">
+                        <h3 className="text-2xl font-black text-gray-400 dark:text-zinc-700 uppercase italic">Belum ada artikel saat ini</h3>
+                        <p className="text-gray-500 mt-2">Nantikan update terbaru dari kami segera!</p>
+                    </div>
+                )}
             </div>
         </div>
     );

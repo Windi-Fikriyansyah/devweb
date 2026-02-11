@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Hubungi Kami | DevStudio",
+    title: "Hubungi Kami | Webkite",
     description: "Konsultasikan kebutuhan digital Anda gratis. Hubungi kami via WhatsApp, Email, atau kunjungi kantor kami.",
 };
 
@@ -64,8 +64,8 @@ export default function ContactPage() {
                                 <div className="ml-6">
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400">
-                                        info@devstudio.com<br />
-                                        support@devstudio.com
+                                        info@Webkite.com<br />
+                                        support@Webkite.com
                                     </p>
                                 </div>
                             </div>

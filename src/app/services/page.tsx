@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Globe, Smartphone, Monitor, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Layanan Jasa Pembuatan Website & Aplikasi | DevStudio",
+    title: "Layanan Jasa Pembuatan Website & Aplikasi | Webkite",
     description: "Daftar layanan lengkap kami: Jasa Web Design, Web Apps (SaaS), dan Mobile Apps (Android/iOS) dengan teknologi terkini.",
 };
 

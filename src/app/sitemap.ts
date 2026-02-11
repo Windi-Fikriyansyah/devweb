@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://devstudio.com'; // Change to actual domain
+const baseUrl = 'https://Webkite.com'; // Change to actual domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
