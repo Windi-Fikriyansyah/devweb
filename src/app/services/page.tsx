@@ -15,7 +15,7 @@ export default function ServicesPage() {
             description: 'Solusi website company profile profesional untuk meningkatkan kredibilitas bisnis Anda di era digital.',
             features: ['Modern Responsive Design', 'SEO On-Page Optimization', 'Fast Loading Speed', 'CMS Integration'],
             link: '/services/web',
-            color: 'text-blue-600',
+            color: 'text-blue-700 dark:text-blue-400',
             bgColor: 'bg-blue-100 dark:bg-blue-900/30'
         },
         {
@@ -24,7 +24,7 @@ export default function ServicesPage() {
             description: 'Sistem informasi berbasis web kompleks, dashboard, CRM, dan ERP untuk efisiensi operasional.',
             features: ['SaaS Architecture', 'Real-time Data', 'High Security', 'Scalable Database'],
             link: '/services/web-app',
-            color: 'text-purple-600',
+            color: 'text-purple-700 dark:text-purple-400',
             bgColor: 'bg-purple-100 dark:bg-purple-900/30'
         },
         {
@@ -33,7 +33,7 @@ export default function ServicesPage() {
             description: 'Aplikasi mobile native performance untuk Android & iOS menggunakan teknologi Cross-Platform.',
             features: ['React Native / Flutter', 'Publish PlayStore & AppStore', 'Push Notifications', 'Offline Mode'],
             link: '/services/mobile-app',
-            color: 'text-pink-600',
+            color: 'text-pink-700 dark:text-pink-400',
             bgColor: 'bg-pink-100 dark:bg-pink-900/30'
         }
     ];

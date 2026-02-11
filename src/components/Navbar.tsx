@@ -58,7 +58,11 @@ export default function Navbar() {
                             <div key={item.name} className="relative group">
                                 {item.dropdown ? (
                                     <>
-                                        <button className="flex items-center space-x-1 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2">
+                                        <button
+                                            className="flex items-center space-x-1 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
+                                            aria-label={`Buka menu ${item.name}`}
+                                            aria-haspopup="true"
+                                        >
                                             <span>{item.name}</span>
                                             <ChevronDown className="h-4 w-4" />
                                         </button>
@@ -121,6 +125,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
+                            aria-label={isOpen ? "Close menu" : "Open menu"}
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>

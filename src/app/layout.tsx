@@ -74,6 +74,10 @@ export default function RootLayout({
 
   return (
     <html lang="id" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+      </head>
       <body
         className={`${inter.className} min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white antialiased`}
       >

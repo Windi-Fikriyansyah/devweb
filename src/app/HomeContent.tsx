@@ -33,17 +33,13 @@ export default function HomeContent() {
             <section className="relative px-4 pt-16 pb-24 md:pt-20 md:pb-32 lg:pt-28 lg:pb-40 overflow-hidden text-center">
                 <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-black"></div>
                 <div className="relative z-10 container mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <div className="inline-flex items-center px-4 py-2 mb-8 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-semibold tracking-wide uppercase">
+                    <div>
+                        <div className="inline-flex items-center px-4 py-2 mb-8 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-semibold tracking-wide uppercase">
                             <span className="w-2 h-2 mr-2 bg-blue-600 rounded-full animate-pulse"></span>
                             Partner Digital Kreatif Anda di Pontianak
                         </div>
                         <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
-                            Jasa Pembuatan Website Profesional di <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Pontianak</span> – Hadirkan Bisnis Anda di Halaman 1 Google.
+                            Jasa Pembuatan Website Profesional di <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-700 dark:from-blue-500 dark:to-purple-500">Pontianak</span> – Hadirkan Bisnis Anda di Halaman 1 Google.
                         </h1>
                         <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
                             Bantu UMKM dan Perusahaan di Pontianak Go-Digital dengan website yang cepat, elegan, dan menghasilkan penjualan. <strong>Bisa ketemuan langsung untuk konsultasi!</strong>
@@ -52,36 +48,35 @@ export default function HomeContent() {
                             <Link
                                 href="https://wa.me/6289678386070"
                                 className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                                aria-label="Konsultasi Gratis via WhatsApp"
                             >
                                 Konsultasi via WhatsApp - Gratis
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Link>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
             {/* Section 2: Trust Bar (Section Logo) */}
             <section className="py-12 bg-gray-50 dark:bg-zinc-900/50 border-y border-gray-100 dark:border-zinc-800">
                 <div className="container mx-auto px-4">
+                    <h2 className="sr-only">Klien dan Partner Kami</h2>
                     <p className="text-center text-xs font-bold text-gray-500 mb-10 uppercase tracking-widest">Dipercaya oleh Pelaku Usaha & Digital Kreator:</p>
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-90 hover:opacity-100 transition-all duration-500 px-4">
                         <div className="relative w-32 h-12">
-                            <Image src="/image/agmr.webp" alt="AGMR Logo" fill className="object-contain" />
+                            <Image src="/image/agmr.webp" alt="AGMR Logo" fill className="object-contain" sizes="128px" />
                         </div>
                         <div className="relative w-40 h-14">
-                            <Image src="/image/ptsumberniaga.webp" alt="PT Sumber Niaga Logo" fill className="object-contain" />
+                            <Image src="/image/ptsumberniaga.webp" alt="PT Sumber Niaga Logo" fill className="object-contain" sizes="160px" />
                         </div>
 
                         <div className="relative w-56 h-20">
-                            <Image src="/image/kelassatu.webp" alt="Kelas satu Logo" fill className="object-contain" />
+                            <Image src="/image/kelassatu.webp" alt="Kelas satu Logo" fill className="object-contain" sizes="224px" />
                         </div>
                         <div className="relative w-60 h-35">
-                            <Image src="/image/sekolah.webp" alt="Sekolah Partner Logo" fill className="object-contain" />
+                            <Image src="/image/sekolah.webp" alt="Sekolah Partner Logo" fill className="object-contain" sizes="240px" />
                         </div>
-                        {/* Standard platform icons for additional trust */}
-
-
                     </div>
                 </div>
             </section>
@@ -89,7 +84,8 @@ export default function HomeContent() {
             {/* Section 3: Value Proposition (Kenapa Harus Kami?) */}
             <section className="py-24 bg-white dark:bg-black">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <h2 className="sr-only">Keunggulan Layanan Kami</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-900 dark:text-white">
                         {[
                             { title: "Partner Lokal Terpercaya", icon: MapPin, color: "blue", desc: "Kami berbasis di Pontianak. Siap diajak bertemu langsung untuk mendiskusikan strategi digital bisnis Anda." },
                             { title: "Website High-Performance", icon: Smartphone, color: "green", desc: "Website buatan kami ringan, responsif di HP, dan menggunakan standar keamanan terbaru." },
@@ -104,7 +100,7 @@ export default function HomeContent() {
                                 className="flex flex-col items-center p-8 bg-gray-50 dark:bg-zinc-900/50 rounded-[2rem] border border-gray-100 dark:border-zinc-800"
                             >
                                 <div className={`w-16 h-16 bg-${prop.color}-100 dark:bg-${prop.color}-900/30 rounded-2xl flex items-center justify-center mb-8`}>
-                                    <prop.icon className={`w-8 h-8 text-${prop.color}-600 md:text-${prop.color}-500`} />
+                                    <prop.icon className={`w-8 h-8 text-${prop.color}-700 dark:text-${prop.color}-400`} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-4">{prop.title}</h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{prop.desc}</p>
@@ -136,9 +132,9 @@ export default function HomeContent() {
                                 <div className={`w-12 h-12 bg-${service.color}-100 dark:bg-${service.color}-900/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                                     <service.icon className={`w-6 h-6 text-${service.color}-600`} />
                                 </div>
-                                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{service.title}</h3>
                                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{service.desc}</p>
-                                <Link href={service.href} className={`text-${service.color}-600 font-bold text-sm inline-flex items-center`}>Info Detail <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                                <Link href={service.href} className={`text-${service.color}-700 dark:text-${service.color}-400 font-bold text-sm inline-flex items-center hover:underline`} aria-label={`Info Detail tentang ${service.title}`}>Info Detail <ArrowRight className="ml-2 w-4 h-4" /></Link>
                             </div>
                         ))}
                     </div>
@@ -167,6 +163,7 @@ export default function HomeContent() {
                                 });
                             }}
                             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-zinc-800 shadow-lg p-3 rounded-full hover:scale-110 transition"
+                            aria-label="Slide sebelumnya"
                         >
                             <ChevronLeft />
                         </button>
@@ -210,6 +207,7 @@ export default function HomeContent() {
                                 });
                             }}
                             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-zinc-800 shadow-lg p-3 rounded-full hover:scale-110 transition"
+                            aria-label="Slide berikutnya"
                         >
                             <ChevronRight />
                         </button>
@@ -288,7 +286,7 @@ export default function HomeContent() {
             <section className="py-24 bg-blue-600 text-white text-center">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight">SIAP DIGITALISASI BISNIS ANDA?</h2>
-                    <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Mari diskusi santai untuk kembangkan strategi digital yang tepat sasaran.</p>
+                    <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">Mari diskusi santai untuk kembangkan strategi digital yang tepat sasaran.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link href="/contact" className="px-10 py-5 bg-white text-blue-600 font-black rounded-2xl shadow-xl hover:bg-gray-100 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-sm">
                             Hubungi Kami

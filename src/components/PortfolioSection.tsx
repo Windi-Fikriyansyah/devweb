@@ -93,8 +93,9 @@ export default function PortfolioSection({
                                         onClick={() => setActiveCategory(cat)}
                                         className={`px-6 py-2.5 rounded-xl text-xs font-black transition-all duration-300 whitespace-nowrap ${activeCategory === cat
                                             ? "bg-white dark:bg-zinc-800 text-blue-600 shadow-md transform scale-105"
-                                            : "text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                                            : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                                             }`}
+                                        aria-label={`Filter portfolio by ${cat}`}
                                     >
                                         {cat}
                                     </button>
@@ -128,8 +129,8 @@ export default function PortfolioSection({
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                                        <Link href="/portfolio" className="bg-white text-zinc-900 px-5 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
-                                            Detail <ExternalLink size={16} />
+                                        <Link href="/portfolio" className="bg-white text-zinc-900 px-5 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl" aria-label={`Lihat detail ${item.title}`}>
+                                            Detail {item.title} <ExternalLink size={16} />
                                         </Link>
                                     </div>
                                 </div>
@@ -151,7 +152,7 @@ export default function PortfolioSection({
 
                 {showFooterLink && (
                     <div className="mt-16 text-center">
-                        <Link href="/portfolio" className="inline-flex items-center text-zinc-400 hover:text-blue-600 font-bold tracking-widest text-sm uppercase transition-colors">
+                        <Link href="/portfolio" className="inline-flex items-center text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 font-bold tracking-widest text-sm uppercase transition-colors">
                             Lihat Seluruh Karya Kami <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>
