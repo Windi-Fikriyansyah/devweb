@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     description:
       "Bangun website dan aplikasi impian Anda bersama kami. Teknologi terkini Next.js, React Native, & Flutter.",
     siteName: "Webkite",
+    images: [
+      {
+        url: "/image/og-webkite.png", // Path ke file gambar di folder public
+        width: 1200,
+        height: 630,
+        alt: "Webkite Jasa Pembuatan Website Pontianak",
+      },
+    ],
   },
 };
 
