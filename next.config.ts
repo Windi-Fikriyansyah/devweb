@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'via.placeholder.com', // Untuk mockup
       },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io', // Untuk ImageKit
+      },
     ],
   },
 };
