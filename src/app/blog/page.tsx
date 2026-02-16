@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import db from '@/lib/db';
 import BlogContent from './BlogContent';
 
+export const dynamic = 'force-dynamic';
+
+
 export const metadata: Metadata = {
     title: "Blog & Insight Digital Pontianak | Tips Bisnis & Teknologi",
     description: "Baca artikel terbaru seputar jasa pembuatan website, strategi ekspor UMKM, tips toko online, dan tren teknologi digital di Pontianak.",

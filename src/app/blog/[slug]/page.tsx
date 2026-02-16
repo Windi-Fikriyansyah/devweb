@@ -5,6 +5,9 @@ import { ArrowLeft, ArrowRight, Calendar, User, Clock, Share2, ChevronRight, Boo
 import db from '@/lib/db';
 import ReadingProgress from '@/components/ReadingProgress';
 
+export const dynamic = 'force-dynamic';
+
+
 async function getArticleBySlug(slug: string) {
     try {
         const [rows] = await db.query('SELECT * FROM articles WHERE slug = ?', [slug]);
@@ -104,6 +107,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         fill
                         className="object-cover"
                         priority
+                        unoptimized
                     />
                 </div>
 
@@ -164,7 +168,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {relatedArticles.map((rel) => (
                                 <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group relative aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 dark:border-zinc-800">
-                                    <Image src={rel.image_url || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800'} alt={rel.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                                    <Image src={rel.image_url || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800'} alt={rel.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" unoptimized />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 flex flex-col justify-end">
                                         <div className="mb-3">
                                             <span className="px-3 py-1 bg-blue-600 text-white text-[9px] font-black uppercase tracking-widest rounded-lg">

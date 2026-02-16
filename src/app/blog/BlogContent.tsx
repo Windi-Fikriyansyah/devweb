@@ -36,6 +36,7 @@ export default function BlogContent({ articles }: { articles: any[] }) {
                                         alt={article.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        unoptimized
                                     />
                                     <div className="absolute top-4 left-4">
                                         <span className="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
