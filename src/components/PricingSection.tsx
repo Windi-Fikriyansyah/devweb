@@ -2,6 +2,7 @@
 
 import { Check, Zap, Globe, ShoppingCart, Rocket, Settings } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function PricingSection() {
     const pricingData = [
@@ -97,16 +98,27 @@ export default function PricingSection() {
     return (
         <section className="py-24 bg-white dark:bg-black overflow-hidden" id="pricing">
             <div className="container mx-auto px-4 max-w-6xl">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-12"
+                >
                     <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white uppercase tracking-tighter mb-4">
                         Pilihan <span className="text-blue-600">Paket</span> Website
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Hadir untuk membantu Anda dalam mewujudkan website untuk usaha UMKM hingga Perusahaan supaya Go Online.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="relative bg-white dark:bg-zinc-900 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 dark:border-zinc-800">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    className="relative bg-white dark:bg-zinc-900 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 dark:border-zinc-800"
+                >
                     <div className="overflow-x-auto no-scrollbar">
                         <table className="w-full min-w-[800px] border-collapse text-left table-fixed">
                             <thead>
@@ -163,7 +175,7 @@ export default function PricingSection() {
                                     {pricingData.map((pkg, i) => (
                                         <td key={i} className={`p-6 ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
                                             <Link
-                                                href={`https://wa.me/6289685478807?text=Halo,%20saya%20tertarik%20dengan%20paket%20website%20${pkg.name}`}
+                                                href={`https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20paket%20website%20${pkg.name}`}
                                                 className={`flex items-center justify-center w-full py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all ${pkg.popular
                                                     ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-xl shadow-blue-600/20'
                                                     : 'bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-black dark:hover:bg-gray-200'
@@ -177,7 +189,7 @@ export default function PricingSection() {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="mt-8 text-center">
                     <p className="text-xs text-gray-500 font-medium uppercase tracking-[0.3em]">
@@ -190,6 +202,6 @@ export default function PricingSection() {
                 .no-scrollbar::-webkit-scrollbar { display: none; }
                 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
             `}</style>
-        </section>
+        </section >
     );
 }
