@@ -89,9 +89,9 @@ export default function HomeContent() {
                     <h2 className="sr-only">Keunggulan Layanan Kami</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-900 dark:text-white">
                         {[
-                            { title: "Partner Lokal Terpercaya", icon: MapPin, color: "blue", desc: "Kami berbasis di Pontianak. Siap diajak bertemu langsung untuk mendiskusikan strategi digital bisnis Anda." },
-                            { title: "Website High-Performance", icon: Smartphone, color: "green", desc: "Website buatan kami ringan, responsif di HP, dan menggunakan standar keamanan terbaru." },
-                            { title: "Siap Terima Beres", icon: Rocket, color: "purple", desc: "Mulai dari domain, hosting, hingga optimasi SEO awal agar website Anda mudah ditemukan di Google." }
+                            { title: "Bisa Ketemuan Langsung", icon: MapPin, color: "blue", desc: "Kami asli orang Pontianak. Siap diajak ngopi atau datang ke toko Anda untuk diskusi strategi jualan online yang pas buat bisnis Anda." },
+                            { title: "Tetap Rapi di HP Jadul", icon: Smartphone, color: "green", desc: "Website Anda tetap cantik dan mudah dibaca meski dibuka dari HP lama sekalipun. Tombol pas di jempol, tulisan jelas terbaca." },
+                            { title: "Gampang Dicari di Google", icon: Rocket, color: "purple", desc: "Kami bantu website Anda muncul saat orang cari produk Anda di Google. Makin gampang ditemukan, makin banyak orang yang mampir." }
                         ].map((prop, i) => (
                             <motion.div
                                 key={i}
@@ -125,10 +125,10 @@ export default function HomeContent() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
                         {[
-                            { title: "Profil Perusahaan", icon: Monitor, color: "blue", desc: "Untuk Instansi, Jasa, & Kantor. Tampilkan kredibilitas secara profesional.", href: "/jasa-pembuatan-website-pontianak" },
-                            { title: "Toko Online", icon: Smartphone, color: "purple", desc: "Sistem penjualan otomatis 24 jam dengan integrasi payment gateway & ongkir.", href: "/jasa-toko-online-pontianak" },
-                            { title: "Website Ekspor", icon: Globe, color: "green", desc: "Standar internasional untuk pasar global. Multibahasa dan SEO Global.", href: "/jasa-website-ekspor-pontianak" },
-                            { title: "Landing Page", icon: Zap, color: "pink", desc: "Fokus konversi tinggi untuk iklan & promo. Cocok untuk kampanye spesifik.", href: "/services" }
+                            { title: "Profil Bisnis", icon: Monitor, color: "blue", desc: "Bikin usaha Anda terlihat profesional di internet. Cocok untuk jasa, kantor, atau bengkel.", href: "/jasa-pembuatan-website-pontianak" },
+                            { title: "Toko Online", icon: Smartphone, color: "purple", desc: "Jualan otomatis 24 jam. Biarkan sistem yang hitung ongkir dan terima pembayaran sementara Anda fokus kirim barang.", href: "/jasa-toko-online-pontianak" },
+                            { title: "Pasar Luar Negeri", icon: Globe, color: "green", desc: "Website khusus untuk ekspor. Menggunakan bahasa Inggris dan sudah diatur supaya bos-bos di luar negeri bisa nemuin Anda.", href: "/jasa-website-ekspor-pontianak" },
+                            { title: "Halaman Promosi", icon: Zap, color: "pink", desc: "Website satu halaman yang fokus buat jualan barang cepat laku. Cocok banget buat dipasang di iklan FB atau TikTok.", href: "/services" }
                         ].map((service, i) => (
                             <div key={i} className="p-8 bg-gray-50 dark:bg-zinc-900/50 rounded-3xl border border-gray-100 dark:border-zinc-800 hover:border-blue-500/50 transition-all group">
                                 <div className={`w-12 h-12 bg-${service.color}-100 dark:bg-${service.color}-900/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -182,13 +182,13 @@ export default function HomeContent() {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col md:flex-row items-center gap-12 text-left">
                         <div className="md:w-1/2">
-                            <span className="inline-block py-1 px-3 rounded bg-blue-600/20 text-blue-400 text-sm font-semibold mb-4 border border-blue-500/30 uppercase tracking-widest text-[10px]">Tech Stack Unggulan</span>
+                            <span className="inline-block py-1 px-3 rounded bg-blue-600/20 text-blue-400 text-sm font-semibold mb-4 border border-blue-500/30 uppercase tracking-widest text-[10px]">Rahasia Website Cepat</span>
                             <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Kecepatan Adalah <br /><span className="text-blue-500">Segalanya.</span></h2>
                             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                                Next.js memberikan kecepatan loading ekstrim, SEO yang lebih baik di Google, dan keamanan tingkat enterprise yang sulit didapat di platform biasa.
+                                Kami pakai teknologi terbaru yang bikin website Anda terbuka secepat kilat (sat-set), gampang dicari di Google, dan aman dari tangan jahil hacker.
                             </p>
                             <ul className="space-y-4">
-                                {['Google PageSpeed Score 90+', 'SEO Friendly (SSR/ISR)', 'Keamanan Enterprise Grade'].map(item => (
+                                {['Lolos Uji Kecepatan Google', 'Sudah Diatur Biar Gampang Dicari', 'Sistem Aman & Tahan Gangguan'].map(item => (
                                     <li key={item} className="flex items-center text-gray-300 font-semibold text-sm">
                                         <CheckCircle2 className="w-5 h-5 text-green-500 mr-3 shrink-0" />
                                         {item}

@@ -11,7 +11,7 @@ interface TestimonialsSectionProps {
 
 export default function TestimonialsSection({
     title = "Testimoni",
-    description = "Testimoni real dari WhatsApp — tanpa edit, tanpa rekayasa."
+    description = ""
 }: TestimonialsSectionProps) {
     const testimonialImages = [
         "/image/testimoni/wa1.webp",

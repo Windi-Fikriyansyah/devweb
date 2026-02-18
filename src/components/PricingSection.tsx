@@ -9,13 +9,13 @@ export default function PricingSection() {
         {
             name: "Express",
             price: "Rp 800rb",
-            desc: "Landing Page",
+            desc: "Halaman Promosi",
             features: {
                 target: "UMKM Mikro",
-                tech: "Next.js Static",
+                tech: "Sangat Ringan (Sat-set)",
                 pages: "5 Halaman",
                 wa: true,
-                seo: "Basic",
+                seo: "Gampang Dicari",
                 payment: false,
                 support: "1 Minggu",
             },
@@ -24,13 +24,13 @@ export default function PricingSection() {
         {
             name: "Startup",
             price: "Rp 1.5jt - 2.5jt",
-            desc: "Bisnis Lokal",
+            desc: "Profil Bisnis",
             features: {
                 target: "Jasa & UKM",
-                tech: "Next.js / WP",
+                tech: "Bisa Edit Mandiri",
                 pages: "Up to 8 Hal",
                 wa: true,
-                seo: "Local SEO",
+                seo: "Jagoan Pontianak",
                 payment: false,
                 support: "1 Bulan",
             },
@@ -39,13 +39,13 @@ export default function PricingSection() {
         {
             name: "Business",
             price: "Rp 3.5jt - 5.5jt",
-            desc: "Ekspor & Supplier",
+            desc: "Pasar Luar Negeri",
             features: {
-                target: "Pasar Global",
-                tech: "Next.js High",
+                target: "Supplier & Ekspor",
+                tech: "Performa Bintang 5",
                 pages: "Up to 20 Hal",
                 wa: true,
-                seo: "Global SEO",
+                seo: "Tampil se-Dunia",
                 payment: false,
                 support: "3 Bulan",
             },
@@ -58,10 +58,10 @@ export default function PricingSection() {
             desc: "Toko Online",
             features: {
                 target: "Jualan Produk",
-                tech: "Full-Stack",
-                pages: "Unlimited",
+                tech: "Sistem Otomatis",
+                pages: "Tak Terbatas",
                 wa: true,
-                seo: "Basic",
+                seo: "Standar Google",
                 payment: true,
                 support: "6 Bulan",
             },
@@ -70,15 +70,15 @@ export default function PricingSection() {
         {
             name: "Custom",
             price: "By Quote",
-            desc: "Sistem & App",
+            desc: "Sistem Khusus",
             features: {
-                target: "Enterprise",
-                tech: "Custom Stack",
-                pages: "Scalable",
+                target: "Perusahaan Besar",
+                tech: "Sesuai Pesanan",
+                pages: "Bisa Ditambah",
                 wa: true,
-                seo: "Custom",
+                seo: "Sesuai Target",
                 payment: true,
-                support: "Priority",
+                support: "Prioritas",
             },
             icon: Settings
         }
@@ -86,13 +86,13 @@ export default function PricingSection() {
 
     const rows = [
         { label: "Harga", key: "price", isTopLevel: true },
-        { label: "Target", key: "target" },
-        { label: "Tech", key: "tech" },
-        { label: "Hal", key: "pages" },
-        { label: "WhatsApp", key: "wa", type: "check" },
-        { label: "SEO", key: "seo" },
-        { label: "Payment", key: "payment", type: "check" },
-        { label: "Support", key: "support" },
+        { label: "Untuk Siapa", key: "target" },
+        { label: "Kecanggihan", key: "tech" },
+        { label: "Isi Halaman", key: "pages" },
+        { label: "Tombol WA", key: "wa", type: "check" },
+        { label: "Gampang Dicari", key: "seo" },
+        { label: "Bayar di Web", key: "payment", type: "check" },
+        { label: "Bantuan", key: "support" },
     ];
 
     return (
