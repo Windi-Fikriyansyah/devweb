@@ -1,19 +1,21 @@
 import { Metadata } from 'next';
-import GeneralLandingPageContent from './Content';
+import CityLandingPage from '@/components/CityLandingPage';
+import { cityInfo } from '@/lib/cityData';
 
 export const metadata: Metadata = {
-    title: "Jasa Pembuatan Website Pontianak Terpercaya | Harga Mulai 1 Juta",
-    description: "Build website bisnis Anda di Pontianak. Jasa pembuatan website untuk apotek, kuliner, kafe, laundry, dan profesional dengan optimasi Local SEO Google Maps.",
+    title: "Jasa Pembuatan Website Pontianak Terbaik | Mulai 750rb Terima Jadi",
+    description: "Jasa pembuatan website Pontianak profesional untuk UMKM & Perusahaan. Harga murah, desain premium, fast loading, dan SEO-friendly. Hubungi Juragan Website sekarang!",
     alternates: {
         canonical: "/jasa-pembuatan-website-pontianak",
     },
     openGraph: {
-        title: "Jasa Pembuatan Website Pontianak Terpercaya",
-        description: "Solusi digital lokal Pontianak untuk meningkatkan omzet bisnis Anda.",
-        images: ["/image/agmr.webp"]
+        title: "Jasa Pembuatan Website Pontianak Terbaik",
+        description: "Solusi website profesional di Pontianak untuk meningkatkan omzet bisnis Anda.",
+        images: ["/image/og-webkite.png"]
     }
 };
 
-export default function GeneralLandingPage() {
-    return <GeneralLandingPageContent />;
+export default function JasaWebsitepontianak() {
+    const data = cityInfo["pontianak"];
+    return <CityLandingPage city={data.city} areas={data.areas} />;
 }
