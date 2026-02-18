@@ -42,9 +42,9 @@ export default function ContactPage() {
                     Kantor Pusat
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400">
-                    Jl. Teknologi No. 123
+                    Jl. Ketapang, Benua Melayu Darat, Kec. Pontianak Sel,
                     <br />
-                    Jakarta Selatan, DKI Jakarta 12345
+                    pontianak, Kalimantan Barat 78243
                     <br />
                     Indonesia
                   </p>
@@ -62,14 +62,14 @@ export default function ContactPage() {
                     Telepon / WhatsApp
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400">
-                    +62 812 3456 7890 (Fast Response)
+                    +62 896 7838 6070 (Fast Response)
                     <br />
                     Senin - Jumat, 09:00 - 17:00
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
                     <Mail className="h-6 w-6" />
@@ -85,15 +85,10 @@ export default function ContactPage() {
                     support@webkite.online
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            {/* Embed Map (Placeholder) */}
-            <div className="mt-10 h-64 bg-gray-200 dark:bg-gray-800 rounded-xl overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                Google Maps Embed Here
-              </div>
-            </div>
+
           </div>
 
           {/* Contact Form */}
