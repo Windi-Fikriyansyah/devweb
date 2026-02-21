@@ -56,7 +56,7 @@ export default function Footer() {
                     {/* Contact */}
                     <div>
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">Hubungi Kami</h3>
-                        <ul className="space-y-4">
+                        <ul className="space-y-4 mb-6">
                             <li className="flex items-start space-x-3 text-gray-600 dark:text-gray-400 text-sm">
                                 <MapPin className="h-5 w-5 text-blue-600 mt-0.5 shrink-0" />
                                 <span>Jl. Ketapang, Benua Melayu Darat, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78243</span>
@@ -65,11 +65,19 @@ export default function Footer() {
                                 <Phone className="h-5 w-5 text-blue-600 shrink-0" />
                                 <span>0896-7838-6070</span>
                             </li>
-                            {/* <li className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 text-sm">
-                                <Mail className="h-5 w-5 text-blue-600 shrink-0" />
-                                <span>hello@domainkamu.com</span>
-                            </li> */}
                         </ul>
+                        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 h-48">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127674.18481530368!2d109.18566615619638!3d-0.008592399560061553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e2f18fe4296967%3A0xdd405b8433eedcd3!2sJasa%20Pembuatan%20Website%20di%20Pontianak%2F%20Jasa%20Pembuatan%20Aplikasi%20Web!5e0!3m2!1sid!2sid!4v1771692841685!5m2!1sid!2sid"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Lokasi Jasa Pembuatan Website Pontianak"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
 
