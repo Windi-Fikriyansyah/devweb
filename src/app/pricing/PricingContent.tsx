@@ -1,192 +1,154 @@
 'use client';
 
-import { Check, Zap, Globe, ShoppingCart, Rocket, Settings } from 'lucide-react';
+import { Check, MessageSquare, Code2, Cpu, Globe2, Sparkles, Zap, Smartphone, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function PricingContent() {
-    const pricingData = [
+    const benefits = [
+        "Fitur Sesuai Kebutuhan",
+        "Desain Eksklusif & Unik",
+        "Terima Jadi & Langsung Online",
+        "Integrasi Sistem Khusus",
+        "Optimasi Kecepatan Sesuai Budget",
+        "Dukungan Teknis Prioritas"
+    ];
+
+    const steps = [
         {
-            name: "Express",
-            price: "Rp 800rb",
-            desc: "Landing Page",
-            features: {
-                target: "UMKM Mikro",
-                tech: "Next.js Static",
-                pages: "5 Halaman",
-                wa: true,
-                seo: "Basic",
-                payment: false,
-                support: "1 Minggu",
-            },
+            title: "Konsultasi",
+            desc: "Diskusikan ide dan kebutuhan fitur website Anda dengan tim kami.",
+            icon: MessageSquare
+        },
+        {
+            title: "Penawaran",
+            desc: "Kami berikan estimasi biaya transparan mulai dari 999rb saja.",
+            icon: Sparkles
+        },
+        {
+            title: "Pengerjaan",
+            desc: "Proses development dengan teknologi modern & clean code.",
+            icon: Code2
+        },
+        {
+            title: "Launch",
+            desc: "Website siap online dan mendukung pertumbuhan bisnis Anda.",
             icon: Zap
-        },
-        {
-            name: "Startup",
-            price: "Rp 1.5jt - 2.5jt",
-            desc: "Bisnis Lokal",
-            features: {
-                target: "Jasa & UKM",
-                tech: "Next.js / WP",
-                pages: "Up to 8 Hal",
-                wa: true,
-                seo: "Local SEO",
-                payment: false,
-                support: "1 Bulan",
-            },
-            icon: Rocket
-        },
-        {
-            name: "Business",
-            price: "Rp 3.5jt - 5.5jt",
-            desc: "Ekspor & Supplier",
-            features: {
-                target: "Pasar Global",
-                tech: "Next.js High",
-                pages: "Up to 20 Hal",
-                wa: true,
-                seo: "Global SEO",
-                payment: false,
-                support: "3 Bulan",
-            },
-            popular: true,
-            icon: Globe
-        },
-        {
-            name: "E-Commerce",
-            price: "Rp 7.0jt++",
-            desc: "Toko Online",
-            features: {
-                target: "Jualan Produk",
-                tech: "Full-Stack",
-                pages: "Unlimited",
-                wa: true,
-                seo: "Basic",
-                payment: true,
-                support: "6 Bulan",
-            },
-            icon: ShoppingCart
-        },
-        {
-            name: "Custom",
-            price: "By Quote",
-            desc: "Sistem & App",
-            features: {
-                target: "Enterprise",
-                tech: "Custom Stack",
-                pages: "Scalable",
-                wa: true,
-                seo: "Custom",
-                payment: true,
-                support: "Priority",
-            },
-            icon: Settings
         }
     ];
 
-    const rows = [
-        { label: "Harga", key: "price", isTopLevel: true },
-        { label: "Target", key: "target" },
-        { label: "Tech", key: "tech" },
-        { label: "Hal", key: "pages" },
-        { label: "WhatsApp", key: "wa", type: "check" },
-        { label: "SEO", key: "seo" },
-        { label: "Payment", key: "payment", type: "check" },
-        { label: "Support", key: "support" },
-    ];
-
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-zinc-950 dark:to-black text-slate-900 dark:text-slate-100 flex flex-col items-center justify-center p-4 pt-24 pb-12">
-            <div className="w-full max-w-6xl mx-auto">
-                <div className="text-center mb-8">
-                    <h1 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white uppercase tracking-tighter">
-                        Pilihan <span className="text-blue-600">Paket</span> Website
-                    </h1>
+        <div className="min-h-screen bg-gradient-to-b from-blue-50/50 to-white dark:from-zinc-950 dark:to-black text-slate-900 dark:text-slate-100 pt-32 pb-24">
+            <div className="container mx-auto px-4 max-w-6xl">
+
+                {/* Hero Header */}
+                <div className="text-center mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-[0.2em] mb-8"
+                    >
+                        <Sparkles className="w-4 h-4" />
+                        Custom Project Solution
+                    </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white uppercase tracking-tighter mb-6"
+                    >
+                        Website <span className="text-blue-600">Custom</span> <br className="hidden md:block" /> Sesuai Budget Anda
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-base leading-relaxed"
+                    >
+                        Punya kebutuhan khusus yang tidak ada di paket standar? Kami bantu bangun sistem website kustom mulai dari Landing Page simple hingga Web App kompleks.
+                    </motion.p>
                 </div>
 
-                <div className="relative bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-zinc-800">
-                    <div className="overflow-x-auto no-scrollbar">
-                        <table className="w-full min-w-[800px] border-collapse text-left table-fixed">
-                            <thead>
-                                <tr className="border-b border-gray-100 dark:border-zinc-800">
-                                    <th className="p-4 w-[140px] bg-gray-50 dark:bg-zinc-800/50 sticky left-0 z-20">
-                                        <span className="text-[10px] font-black uppercase text-gray-400">Fitur</span>
-                                    </th>
-                                    {pricingData.map((pkg, i) => (
-                                        <th key={i} className={`p-4 relative ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <h3 className={`text-sm font-black uppercase truncate ${pkg.popular ? 'text-blue-600' : 'text-gray-900 dark:text-white'}`}>
-                                                    {pkg.name}
-                                                </h3>
-                                            </div>
-                                            <div className="text-[10px] text-gray-500 font-medium">
-                                                {pkg.desc}
-                                            </div>
-                                            {pkg.popular && (
-                                                <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] px-2 py-0.5 rounded-bl-lg font-black uppercase transform">
-                                                    Best
-                                                </div>
-                                            )}
-                                        </th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody className="text-[12px]">
-                                {rows.map((row, rIdx) => (
-                                    <tr key={rIdx} className="border-b border-gray-50 dark:border-zinc-800/50 hover:bg-gray-50 dark:hover:bg-zinc-800/30 transition-colors">
-                                        <td className="p-3 font-bold text-gray-500 dark:text-gray-400 bg-gray-50/50 dark:bg-zinc-900/80 sticky left-0 z-10 border-r border-gray-100 dark:border-zinc-800/50">
-                                            {row.label}
-                                        </td>
-                                        {pricingData.map((pkg: any, cIdx) => (
-                                            <td key={cIdx} className={`p-3 ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                                {row.type === 'check' ? (
-                                                    pkg.features[row.key] ? (
-                                                        <div className={`w-4 h-4 rounded-full flex items-center justify-center ${pkg.popular ? 'bg-blue-600 text-white' : 'bg-green-500 text-white'}`}>
-                                                            <Check className="w-2.5 h-2.5" />
-                                                        </div>
-                                                    ) : (
-                                                        <span className="text-gray-200 dark:text-zinc-800">—</span>
-                                                    )
-                                                ) : (
-                                                    <span className={`block truncate ${row.key === 'price' ? 'font-black text-gray-900 dark:text-white' : 'font-medium'}`}>
-                                                        {row.isTopLevel ? pkg[row.key] : pkg.features[row.key]}
-                                                    </span>
-                                                )}
-                                            </td>
-                                        ))}
-                                    </tr>
+                {/* Main Card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="relative bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-[3rem] p-8 md:p-14 overflow-hidden shadow-2xl mb-20"
+                >
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+
+                    <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                        <div>
+                            <div className="mb-10">
+                                <div className="flex items-baseline gap-3 mb-4">
+                                    <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Harga Mulai</span>
+                                    <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 999rb</span>
+                                </div>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">Bebas request fitur, tampilan, dan integrasi apapun.</p>
+                            </div>
+
+                            <div className="grid sm:grid-cols-2 gap-6 mb-12">
+                                {benefits.map((benefit, i) => (
+                                    <div key={i} className="flex items-center gap-4">
+                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-600/20">
+                                            <Check className="w-3 h-3 stroke-[4]" />
+                                        </div>
+                                        <span className="text-sm font-bold text-gray-700 dark:text-gray-300">{benefit}</span>
+                                    </div>
                                 ))}
-                                <tr>
-                                    <td className="p-4 bg-gray-50/50 dark:bg-zinc-900/80 sticky left-0"></td>
-                                    {pricingData.map((pkg, i) => (
-                                        <td key={i} className={`p-4 ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                            <Link
-                                                href={`https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20${pkg.name}`}
-                                                className={`flex items-center justify-center w-full py-2.5 rounded-lg font-black text-[10px] uppercase tracking-widest transition-all ${pkg.popular
-                                                    ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/20'
-                                                    : 'bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-black dark:hover:bg-gray-200'
-                                                    }`}
-                                            >
-                                                Pilih
-                                            </Link>
-                                        </td>
-                                    ))}
-                                </tr>
-                            </tbody>
-                        </table>
+                            </div>
+
+                            <Link
+                                href="https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20layanan%20custom%20website%20mulai%20999rb"
+                                className="flex items-center justify-center md:inline-flex gap-3 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-2xl shadow-blue-600/30 active:scale-95 group"
+                            >
+                                <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                                <span className="uppercase tracking-widest text-sm">Konsultasi Sekarang</span>
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            {[
+                                { icon: Code2, label: "Tech Stack Modern", color: "text-blue-500" },
+                                { icon: ShieldCheck, label: "Security First", color: "text-emerald-500" },
+                                { icon: Smartphone, label: "Ultra Responsive", color: "text-purple-500" },
+                                { icon: Cpu, label: "Performance Tuned", color: "text-orange-500" },
+                            ].map((item, i) => (
+                                <div key={i} className="p-6 bg-slate-50 dark:bg-zinc-800/40 rounded-3xl border border-gray-100 dark:border-zinc-700/50 hover:bg-white dark:hover:bg-zinc-800 transition-colors group">
+                                    <item.icon className={`w-8 h-8 ${item.color} mb-4 transition-transform group-hover:scale-110`} />
+                                    <h4 className="text-sm font-black uppercase tracking-tighter text-gray-900 dark:text-white leading-tight">{item.label}</h4>
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                </motion.div>
+
+                {/* Steps Section */}
+                <div className="grid md:grid-cols-4 gap-8">
+                    {steps.map((step, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="text-center p-8"
+                        >
+                            <div className="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                                <step.icon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-base font-black uppercase tracking-tighter mb-2 text-gray-900 dark:text-white">{step.title}</h3>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{step.desc}</p>
+                        </motion.div>
+                    ))}
                 </div>
 
-                <div className="mt-6 text-center">
-                    <p className="text-[10px] text-gray-500 font-medium uppercase tracking-[0.2em]">
-                        Semua paket sudah termasuk Domain .com / .id & Hosting Premium 1 Tahun
+                <div className="mt-24 text-center">
+                    <p className="text-xs text-gray-400 font-bold uppercase tracking-[0.3em] bg-white dark:bg-zinc-900 py-4 px-10 rounded-full inline-block border border-gray-100 dark:border-zinc-800 shadow-sm">
+                        ⚡ Melayani Pengembangan Website Baru maupun Penambahan Fitur Website Lama
                     </p>
                 </div>
             </div>
-
-            <style jsx global>{`
-                .no-scrollbar::-webkit-scrollbar { display: none; }
-                .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            `}</style>
         </div>
     );
 }

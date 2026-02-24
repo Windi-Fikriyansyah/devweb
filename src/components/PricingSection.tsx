@@ -1,98 +1,17 @@
 'use client';
 
-import { Check, Zap, Globe, ShoppingCart, Rocket, Settings } from 'lucide-react';
+import { Check, MessageSquare, Code2, Cpu, Globe2, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function PricingSection() {
-    const pricingData = [
-        {
-            name: "Express",
-            price: "Rp 800rb",
-            desc: "Halaman Promosi",
-            features: {
-                target: "UMKM Mikro",
-                tech: "Sangat Ringan (Sat-set)",
-                pages: "5 Halaman",
-                wa: true,
-                seo: "Gampang Dicari",
-                payment: false,
-                support: "1 Minggu",
-            },
-            icon: Zap
-        },
-        {
-            name: "Startup",
-            price: "Rp 1.5jt - 2.5jt",
-            desc: "Profil Bisnis",
-            features: {
-                target: "Jasa & UKM",
-                tech: "Bisa Edit Mandiri",
-                pages: "Up to 8 Hal",
-                wa: true,
-                seo: "Jagoan Pontianak",
-                payment: false,
-                support: "1 Bulan",
-            },
-            icon: Rocket
-        },
-        {
-            name: "Business",
-            price: "Rp 3.5jt - 5.5jt",
-            desc: "Pasar Luar Negeri",
-            features: {
-                target: "Supplier & Ekspor",
-                tech: "Performa Bintang 5",
-                pages: "Up to 20 Hal",
-                wa: true,
-                seo: "Tampil se-Dunia",
-                payment: false,
-                support: "3 Bulan",
-            },
-            popular: true,
-            icon: Globe
-        },
-        {
-            name: "E-Commerce",
-            price: "Rp 7.0jt++",
-            desc: "Toko Online",
-            features: {
-                target: "Jualan Produk",
-                tech: "Sistem Otomatis",
-                pages: "Tak Terbatas",
-                wa: true,
-                seo: "Standar Google",
-                payment: true,
-                support: "6 Bulan",
-            },
-            icon: ShoppingCart
-        },
-        {
-            name: "Custom",
-            price: "By Quote",
-            desc: "Sistem Khusus",
-            features: {
-                target: "Perusahaan Besar",
-                tech: "Sesuai Pesanan",
-                pages: "Bisa Ditambah",
-                wa: true,
-                seo: "Sesuai Target",
-                payment: true,
-                support: "Prioritas",
-            },
-            icon: Settings
-        }
-    ];
-
-    const rows = [
-        { label: "Harga", key: "price", isTopLevel: true },
-        { label: "Untuk Siapa", key: "target" },
-        { label: "Kecanggihan", key: "tech" },
-        { label: "Isi Halaman", key: "pages" },
-        { label: "Tombol WA", key: "wa", type: "check" },
-        { label: "Gampang Dicari", key: "seo" },
-        { label: "Bayar di Web", key: "payment", type: "check" },
-        { label: "Bantuan", key: "support" },
+    const benefits = [
+        "Fitur Sesuai Kebutuhan",
+        "Desain Eksklusif & Unik",
+        "Terima Jadi & Langsung Online",
+        "Integrasi Sistem Khusus",
+        "Optimasi Kecepatan Sesuai Budget",
+        "Dukungan Teknis Prioritas"
     ];
 
     return (
@@ -102,106 +21,111 @@ export default function PricingSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="text-center mb-16"
                 >
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-[0.2em] mb-6">
+                        <Sparkles className="w-3 h-3" />
+                        Solusi Custom
+                    </span>
                     <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white uppercase tracking-tighter mb-4">
-                        Pilihan <span className="text-blue-600">Paket</span> Website
+                        Punya <span className="text-blue-600">Ide</span> Proyek?
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                        Hadir untuk membantu Anda dalam mewujudkan website untuk usaha UMKM hingga Perusahaan supaya Go Online.
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
+                        Kami siap merealisasikan website impian Anda dengan sistem yang fleksibel dan budget yang bisa disesuaikan.
                     </p>
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative bg-white dark:bg-zinc-900 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 dark:border-zinc-800"
+                    className="relative group"
                 >
-                    <div className="overflow-x-auto no-scrollbar">
-                        <table className="w-full min-w-[800px] border-collapse text-left table-fixed">
-                            <thead>
-                                <tr className="border-b border-gray-100 dark:border-zinc-800">
-                                    <th className="p-6 w-[140px] bg-gray-50 dark:bg-zinc-800/50 sticky left-0 z-20">
-                                        <span className="text-[10px] font-black uppercase text-gray-400">Fitur</span>
-                                    </th>
-                                    {pricingData.map((pkg, i) => (
-                                        <th key={i} className={`p-6 relative ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <h3 className={`text-sm font-black uppercase truncate ${pkg.popular ? 'text-blue-600' : 'text-gray-900 dark:text-white'}`}>
-                                                    {pkg.name}
-                                                </h3>
-                                            </div>
-                                            <div className="text-[10px] text-gray-500 font-medium">
-                                                {pkg.desc}
-                                            </div>
-                                            {pkg.popular && (
-                                                <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] px-3 py-1 rounded-bl-lg font-black uppercase tracking-widest transform">
-                                                    Best
-                                                </div>
-                                            )}
-                                        </th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody className="text-[12px]">
-                                {rows.map((row, rIdx) => (
-                                    <tr key={rIdx} className="border-b border-gray-50 dark:border-zinc-800/50 hover:bg-gray-50 dark:hover:bg-zinc-800/30 transition-colors">
-                                        <td className="p-4 font-bold text-gray-500 dark:text-gray-400 bg-gray-50/50 dark:bg-zinc-900/80 sticky left-0 z-10 border-r border-gray-100 dark:border-zinc-800/50">
-                                            {row.label}
-                                        </td>
-                                        {pricingData.map((pkg: any, cIdx) => (
-                                            <td key={cIdx} className={`p-4 ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                                {row.type === 'check' ? (
-                                                    pkg.features[row.key] ? (
-                                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center ${pkg.popular ? 'bg-blue-600 text-white' : 'bg-green-500 text-white'}`}>
-                                                            <Check className="w-3 h-3" />
-                                                        </div>
-                                                    ) : (
-                                                        <span className="text-gray-200 dark:text-zinc-800">—</span>
-                                                    )
-                                                ) : (
-                                                    <span className={`block truncate ${row.key === 'price' ? 'font-black text-gray-900 dark:text-white text-base' : 'font-medium'}`}>
-                                                        {row.isTopLevel ? pkg[row.key] : pkg.features[row.key]}
-                                                    </span>
-                                                )}
-                                            </td>
-                                        ))}
-                                    </tr>
-                                ))}
-                                <tr>
-                                    <td className="p-6 bg-gray-50/50 dark:bg-zinc-900/80 sticky left-0"></td>
-                                    {pricingData.map((pkg, i) => (
-                                        <td key={i} className={`p-6 ${pkg.popular ? 'bg-blue-50/50 dark:bg-blue-500/5' : ''}`}>
-                                            <Link
-                                                href={`https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20paket%20website%20${pkg.name}`}
-                                                className={`flex items-center justify-center w-full py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all ${pkg.popular
-                                                    ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-xl shadow-blue-600/20'
-                                                    : 'bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-black dark:hover:bg-gray-200'
-                                                    }`}
+                    {/* Background Decorative Blur */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[3rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+
+                    <div className="relative bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-[3rem] p-8 md:p-16 overflow-hidden shadow-2xl">
+                        <div className="grid lg:grid-cols-12 gap-12 items-center">
+
+                            {/* Left Side: Content */}
+                            <div className="lg:col-span-7">
+                                <div className="space-y-8">
+                                    <div className="inline-block">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Mulai dari</span>
+                                            <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 999Rb</span>
+                                        </div>
+                                        <p className="text-gray-500 dark:text-gray-400 font-medium mt-2 text-sm">Budget fleksibel sesuai kompleksitas fitur yang Anda inginkan.</p>
+                                    </div>
+
+                                    <div className="grid sm:grid-cols-2 gap-6">
+                                        {benefits.map((benefit, i) => (
+                                            <motion.div
+                                                key={i}
+                                                initial={{ opacity: 0, x: -10 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                transition={{ delay: i * 0.1 }}
+                                                className="flex items-center gap-3"
                                             >
-                                                Pilih Paket
-                                            </Link>
-                                        </td>
-                                    ))}
-                                </tr>
-                            </tbody>
-                        </table>
+                                                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center">
+                                                    <Check className="w-3.5 h-3.5 text-emerald-500 stroke-[4]" />
+                                                </div>
+                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-300">{benefit}</span>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+
+                                    <div className="pt-6">
+                                        <Link
+                                            href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20proyek%20custom%20website%20dengan%20budget%20mulai%20999rb"
+                                            className="inline-flex items-center gap-4 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-95 group/btn"
+                                        >
+                                            <MessageSquare className="w-5 h-5 group-hover/btn:rotate-12 transition-transform" />
+                                            <span className="uppercase tracking-widest text-sm">Konsultasi via WhatsApp</span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Side: Visual decoration */}
+                            <div className="lg:col-span-5 hidden lg:block">
+                                <div className="relative">
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="space-y-4">
+                                            <div className="p-6 bg-slate-50 dark:bg-zinc-800/50 rounded-3xl border border-gray-100 dark:border-zinc-700">
+                                                <Code2 className="w-8 h-8 text-blue-600 mb-4" />
+                                                <p className="text-xs font-black uppercase text-gray-400 tracking-tighter">Clean Code</p>
+                                            </div>
+                                            <div className="p-6 bg-slate-50 dark:bg-zinc-800/50 rounded-3xl border border-gray-100 dark:border-zinc-700 translate-x-8">
+                                                <Cpu className="w-8 h-8 text-purple-600 mb-4" />
+                                                <p className="text-xs font-black uppercase text-gray-400 tracking-tighter">Performance</p>
+                                            </div>
+                                        </div>
+                                        <div className="pt-12 space-y-4">
+                                            <div className="p-6 bg-slate-50 dark:bg-zinc-800/50 rounded-3xl border border-gray-100 dark:border-zinc-700">
+                                                <Globe2 className="w-8 h-8 text-emerald-600 mb-4" />
+                                                <p className="text-xs font-black uppercase text-gray-400 tracking-tighter">Scalability</p>
+                                            </div>
+                                            <div className="p-6 bg-blue-600 rounded-3xl shadow-xl shadow-blue-600/30 -translate-x-4">
+                                                <Sparkles className="w-8 h-8 text-white mb-4" />
+                                                <p className="text-xs font-black uppercase text-white/50 tracking-tighter">Modern UI</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </motion.div>
 
-                <div className="mt-8 text-center">
-                    <p className="text-xs text-gray-500 font-medium uppercase tracking-[0.3em]">
-                        Semua paket sudah termasuk Domain & Hosting Premium 1 Tahun
+                <div className="mt-16 text-center">
+                    <p className="text-xs text-gray-400 font-bold uppercase tracking-[0.3em] bg-gray-50 dark:bg-zinc-900/50 py-4 px-8 rounded-full inline-block border border-gray-100 dark:border-zinc-800">
+                        ⚡ Kami juga melayani pengerjaan fitur spesifik atau maintenance website lama
                     </p>
                 </div>
             </div>
-
-            <style jsx>{`
-                .no-scrollbar::-webkit-scrollbar { display: none; }
-                .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            `}</style>
-        </section >
+        </section>
     );
 }

@@ -3,7 +3,7 @@ import CityLandingPage from '@/components/CityLandingPage';
 import { cityInfo } from '@/lib/cityData';
 
 export const metadata: Metadata = {
-    title: "Jasa Pembuatan Website Bengkayang Terbaik | Mulai 750rb Terima Jadi",
+    title: "Jasa Pembuatan Website Bengkayang Terbaik | Terima Jadi",
     description: "Jasa pembuatan website Bengkayang profesional untuk UMKM & Perusahaan. Harga murah, desain premium, fast loading, dan SEO-friendly. Hubungi Juragan Website sekarang!",
     alternates: {
         canonical: "/jasa-pembuatan-website-bengkayang",
