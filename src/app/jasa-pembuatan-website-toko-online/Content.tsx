@@ -189,6 +189,72 @@ export default function TokoOnlineLandingContent() {
                 </div>
             </section>
 
+            {/* Template Website Section */}
+            <section className="py-24 bg-white dark:bg-black overflow-hidden" id="templates">
+                <div className="container mx-auto px-4">
+                    <motion.div {...fadeUp} className="text-center mb-16">
+                        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold uppercase tracking-widest mb-6">
+                            <Layers className="w-4 h-4" />
+                            <span>Pilihan Desain</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
+                            Template Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Toko Online</span>
+                        </h2>
+                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                            Pilih template yang paling sesuai dengan karakter brand Anda. Semua template sudah dioptimasi untuk <span className="font-bold text-slate-900 dark:text-white">konversi tinggi</span>.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "Fashion Store Premium", category: "Fashion & Lifestyle", image: "https://ik.imagekit.io/bzq0b2kjq/template/fashion.png" },
+                            { title: "Beauty Care Specialist", category: "Skincare & Cosmetics", image: "https://ik.imagekit.io/bzq0b2kjq/template/skincare.png" },
+                            { title: "Culinary Delight", category: "Food & Beverage", image: "https://ik.imagekit.io/bzq0b2kjq/template/food.png" },
+                            { title: "Tech Gadget Hub", category: "Electronics", image: "https://ik.imagekit.io/bzq0b2kjq/template/electronics.png" },
+                            { title: "Local Hero UMKM", category: "UMKM & Brand Lokal", image: "https://ik.imagekit.io/bzq0b2kjq/template/umkm.png" },
+                            { title: "Digital Product Hub", category: "Produk Digital", image: "https://ik.imagekit.io/bzq0b2kjq/template/digital.png" },
+                        ].map((template, i) => (
+                            <motion.div
+                                key={i}
+                                {...fadeUp}
+                                transition={{ delay: i * 0.1 }}
+                                className="group bg-slate-50 dark:bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-zinc-800 flex flex-col p-4 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+                            >
+                                <div className="relative h-64 overflow-hidden rounded-[1.8rem] border border-slate-100 dark:border-zinc-800 shadow-inner">
+                                    <Image
+                                        src={template.image}
+                                        alt={template.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                                        <Link href="https://wa.me/6289678386070?text=Halo%20Webkite%2C%20saya%20tertarik%20dengan%20template%20website%20toko%20online" className="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl hover:bg-blue-600 hover:text-white">
+                                            Lihat Template <ExternalLink size={16} />
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="pt-6 pb-2 px-2">
+                                    <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2 block">
+                                        {template.category}
+                                    </span>
+                                    <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2">{template.title}</h3>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm">
+                                        Template responsif dan modern untuk memaksimalkan penjualan bisnis {template.category.toLowerCase()} Anda.
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <motion.div {...fadeUp} className="mt-16 text-center">
+                        <Link href="https://wa.me/6289678386070?text=Halo%20Webkite%2C%20saya%20ingin%20melihat%20pilihan%20template%20toko%20online%20lainnya" className="inline-flex items-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-bold tracking-widest text-sm uppercase transition-colors">
+                            Lihat Pilihan Template Lainnya <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Fitur Website Toko Online */}
             <section id="fitur" className="py-24 bg-slate-50 dark:bg-zinc-950">
                 <div className="container mx-auto px-4">
@@ -399,71 +465,7 @@ export default function TokoOnlineLandingContent() {
                 </div>
             </section>
 
-            {/* Template Website Section */}
-            <section className="py-24 bg-white dark:bg-black overflow-hidden" id="templates">
-                <div className="container mx-auto px-4">
-                    <motion.div {...fadeUp} className="text-center mb-16">
-                        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold uppercase tracking-widest mb-6">
-                            <Layers className="w-4 h-4" />
-                            <span>Pilihan Desain</span>
-                        </div>
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
-                            Template Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Toko Online</span>
-                        </h2>
-                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-                            Pilih template yang paling sesuai dengan karakter brand Anda. Semua template sudah dioptimasi untuk <span className="font-bold text-slate-900 dark:text-white">konversi tinggi</span>.
-                        </p>
-                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            { title: "Fashion Store Premium", category: "Fashion & Lifestyle", image: "https://ik.imagekit.io/bzq0b2kjq/template/fashion.png" },
-                            { title: "Beauty Care Specialist", category: "Skincare & Cosmetics", image: "https://ik.imagekit.io/bzq0b2kjq/template/skincare.png" },
-                            { title: "Culinary Delight", category: "Food & Beverage", image: "https://ik.imagekit.io/bzq0b2kjq/template/food.png" },
-                            { title: "Tech Gadget Hub", category: "Electronics", image: "https://ik.imagekit.io/bzq0b2kjq/template/electronics.png" },
-                            { title: "Local Hero UMKM", category: "UMKM & Brand Lokal", image: "https://ik.imagekit.io/bzq0b2kjq/template/umkm.png" },
-                            { title: "Digital Product Hub", category: "Produk Digital", image: "https://ik.imagekit.io/bzq0b2kjq/template/digital.png" },
-                        ].map((template, i) => (
-                            <motion.div
-                                key={i}
-                                {...fadeUp}
-                                transition={{ delay: i * 0.1 }}
-                                className="group bg-slate-50 dark:bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-zinc-800 flex flex-col p-4 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
-                            >
-                                <div className="relative h-64 overflow-hidden rounded-[1.8rem] border border-slate-100 dark:border-zinc-800 shadow-inner">
-                                    <Image
-                                        src={template.image}
-                                        alt={template.title}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                                        <Link href="https://wa.me/6289678386070?text=Halo%20Webkite%2C%20saya%20tertarik%20dengan%20template%20website%20toko%20online" className="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl hover:bg-blue-600 hover:text-white">
-                                            Lihat Template <ExternalLink size={16} />
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="pt-6 pb-2 px-2">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2 block">
-                                        {template.category}
-                                    </span>
-                                    <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2">{template.title}</h3>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm">
-                                        Template responsif dan modern untuk memaksimalkan penjualan bisnis {template.category.toLowerCase()} Anda.
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    <motion.div {...fadeUp} className="mt-16 text-center">
-                        <Link href="https://wa.me/6289678386070?text=Halo%20Webkite%2C%20saya%20ingin%20melihat%20pilihan%20template%20toko%20online%20lainnya" className="inline-flex items-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-bold tracking-widest text-sm uppercase transition-colors">
-                            Lihat Pilihan Template Lainnya <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </motion.div>
-                </div>
-            </section>
 
             {/* CTA Final */}
             <section className="py-24 bg-white dark:bg-black relative overflow-hidden">
