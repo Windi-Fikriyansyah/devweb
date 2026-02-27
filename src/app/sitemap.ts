@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/jasa-toko-online-pontianak",
     "/jasa-website-ekspor-pontianak",
     "/jasa-pembuatan-aplikasi-pontianak",
+    "/jasa-pembuatan-website-toko-online",
   ];
 
   return routes.map((route) => ({
