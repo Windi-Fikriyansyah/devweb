@@ -417,12 +417,12 @@ export default function TokoOnlineLandingContent() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { title: "Fashion Store Premium", category: "Fashion & Lifestyle", image: "/image/template/fashion.png" },
-                            { title: "Beauty Care Specialist", category: "Skincare & Cosmetics", image: "/image/template/skincare.png" },
-                            { title: "Culinary Delight", category: "Food & Beverage", image: "/image/template/food.png" },
-                            { title: "Tech Gadget Hub", category: "Electronics", image: "/image/template/electronics.png" },
-                            { title: "Local Hero UMKM", category: "UMKM & Brand Lokal", image: "/image/template/umkm.png" },
-                            { title: "Digital Product Hub", category: "Produk Digital", image: "/image/template/digital.png" },
+                            { title: "Fashion Store Premium", category: "Fashion & Lifestyle", image: "https://ik.imagekit.io/bzq0b2kjq/template/fashion.png" },
+                            { title: "Beauty Care Specialist", category: "Skincare & Cosmetics", image: "https://ik.imagekit.io/bzq0b2kjq/template/skincare.png" },
+                            { title: "Culinary Delight", category: "Food & Beverage", image: "https://ik.imagekit.io/bzq0b2kjq/template/food.png" },
+                            { title: "Tech Gadget Hub", category: "Electronics", image: "https://ik.imagekit.io/bzq0b2kjq/template/electronics.png" },
+                            { title: "Local Hero UMKM", category: "UMKM & Brand Lokal", image: "https://ik.imagekit.io/bzq0b2kjq/template/umkm.png" },
+                            { title: "Digital Product Hub", category: "Produk Digital", image: "https://ik.imagekit.io/bzq0b2kjq/template/digital.png" },
                         ].map((template, i) => (
                             <motion.div
                                 key={i}
