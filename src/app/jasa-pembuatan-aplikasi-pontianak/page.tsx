@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import AppLandingPage from '@/components/AppLandingPage';
 
 export const metadata: Metadata = {
-    title: "Jasa Pembuatan Aplikasi Pontianak Terbaik | Mulai 999rb Terima Jadi",
+    title: "Jasa Pembuatan Aplikasi Pontianak Terbaik | Mulai 1,5 jt Terima Jadi",
     description: "Jasa pembuatan aplikasi Pontianak profesional untuk UMKM & Perusahaan. Aplikasi web, mobile, dan sistem custom dengan harga terjangkau. Hubungi Juragan Website sekarang!",
     alternates: {
         canonical: "/jasa-pembuatan-aplikasi-pontianak",

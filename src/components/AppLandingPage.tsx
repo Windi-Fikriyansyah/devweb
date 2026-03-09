@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import PortfolioSection from '@/components/PortfolioSection';
 import PricingSection from '@/components/PricingSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import { fbEvent } from './FacebookPixel';
 
 const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -71,7 +72,11 @@ export default function AppLandingPage() {
                                 <Link href="#app-types" className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-blue-500/20 active:scale-95">
                                     Lihat Layanan <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
-                                <Link href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20di%20Pontianak" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl flex items-center justify-center transition-all backdrop-blur-xl">
+                                <Link
+                                    href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20di%20Pontianak"
+                                    onClick={() => fbEvent('Lead', { method: 'app_hero_wa' })}
+                                    className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl flex items-center justify-center transition-all backdrop-blur-xl"
+                                >
                                     Konsultasi Gratis
                                 </Link>
                             </div>
@@ -91,7 +96,11 @@ export default function AppLandingPage() {
                             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                                 Kami telah berpengalaman membangun berbagai jenis aplikasi untuk UMKM dan perusahaan. Dari sistem sederhana hingga platform kompleks, kami siap mengerjakan aplikasi impian Anda.
                             </p>
-                            <Link href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi" className="inline-flex items-center text-blue-600 font-black text-lg group">
+                            <Link
+                                href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi"
+                                onClick={() => fbEvent('Lead', { method: 'app_stats_wa' })}
+                                className="inline-flex items-center text-blue-600 font-black text-lg group"
+                            >
                                 Konsultasi kebutuhan aplikasi Anda
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                             </Link>
@@ -256,7 +265,11 @@ export default function AppLandingPage() {
                         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px] -mr-48 -mt-48"></div>
                         <h3 className="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Wujudkan Aplikasi Impian Bisnis Anda Sekarang!</h3>
                         <p className="text-blue-100 mb-12 text-xl max-w-2xl mx-auto">Konsultasikan kebutuhan aplikasi Anda dengan tim kami, gratis dan tanpa komitmen!</p>
-                        <Link href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20custom%20di%20Pontianak" className="px-12 py-5 bg-white text-blue-700 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all inline-block uppercase tracking-widest text-sm">
+                        <Link
+                            href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20custom%20di%20Pontianak"
+                            onClick={() => fbEvent('Lead', { method: 'app_footer_wa' })}
+                            className="px-12 py-5 bg-white text-blue-700 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all inline-block uppercase tracking-widest text-sm"
+                        >
                             Konsultasi via WhatsApp
                         </Link>
                     </div>

@@ -11,6 +11,7 @@ import {
 import PortfolioSection from '@/components/PortfolioSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import PricingSection from '@/components/PricingSection';
+import { fbEvent } from '@/components/FacebookPixel';
 
 export default function HomeContent() {
     const faqs = [
@@ -49,6 +50,7 @@ export default function HomeContent() {
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link
                                 href="https://wa.me/6289678386070"
+                                onClick={() => fbEvent('Lead', { method: 'hero_wa' })}
                                 className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-1"
                                 aria-label="Konsultasi Gratis via WhatsApp"
                             >

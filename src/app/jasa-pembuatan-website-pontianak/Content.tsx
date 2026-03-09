@@ -147,7 +147,7 @@ export default function GeneralLandingPageContent() {
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             { i: Clock, t: "Proses Kilat", d: "Selesai dalam 5-7 hari kerja untuk paket standard." },
-                            { i: DollarSign, t: "Harga Terjangkau", d: "Investasi mulai dari Rp 1.XXX.XXX termasuk Domain & Hosting." },
+                            { i: DollarSign, t: "Harga Terjangkau", d: "Investasi mulai dari Rp 1,5 jt termasuk Domain & Hosting." },
                             { i: Layers, t: "Mudah Dikelola", d: "Kami ajarkan cara ganti konten sendiri tanpa perlu IT." }
                         ].map((v, idx) => (
                             <div key={idx} className="text-center p-8">

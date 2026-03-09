@@ -5,6 +5,7 @@ import {
     CheckCircle2, ArrowRight, ShieldCheck, Mail
 } from "lucide-react";
 import PortfolioSection from "@/components/PortfolioSection";
+import { fbEvent } from "@/components/FacebookPixel";
 
 export const metadata: Metadata = {
     title: "Jasa Pembuatan Company Profile Pontianak | Bangun Kredibilitas Bisnis",
@@ -50,6 +51,7 @@ export default function CompanyProfilePage() {
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link
                                 href="https://wa.me/6289678386070"
+                                onClick={() => fbEvent('Lead', { method: 'company_profile_hero_wa' })}
                                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg"
                             >
                                 Konsultasi Profil Perusahaan
@@ -108,6 +110,7 @@ export default function CompanyProfilePage() {
                                 </p>
                                 <Link
                                     href="https://wa.me/6289678386070"
+                                    onClick={() => fbEvent('Lead', { method: 'company_profile_card_wa' })}
                                     className="inline-flex items-center justify-center px-10 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all"
                                 >
                                     Hubungi Kami Sekarang
@@ -128,6 +131,7 @@ export default function CompanyProfilePage() {
                     <p className="mb-10 text-blue-100">Diskon khusus untuk UMKM di Pontianak yang sedang merintis profil online.</p>
                     <Link
                         href="https://wa.me/6289678386070"
+                        onClick={() => fbEvent('Lead', { method: 'company_profile_footer_wa' })}
                         className="px-10 py-4 bg-white text-blue-600 font-bold rounded-full shadow-2xl inline-flex items-center hover:bg-gray-100 transition-all"
                     >
                         Dapatkan Harga Promo <Mail className="ml-2 w-5 h-5" />

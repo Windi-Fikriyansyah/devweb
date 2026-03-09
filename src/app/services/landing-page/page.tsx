@@ -5,6 +5,7 @@ import {
     CheckCircle2, ArrowRight, TrendingUp, Sparkles
 } from "lucide-react";
 import PortfolioSection from "@/components/PortfolioSection";
+import { fbEvent } from "@/components/FacebookPixel";
 
 export const metadata: Metadata = {
     title: "Jasa Pembuatan Landing Page Pontianak | Konversi Penjualan Tinggi",
@@ -50,6 +51,7 @@ export default function LandingPageService() {
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link
                                 href="https://wa.me/6289678386070"
+                                onClick={() => fbEvent('Lead', { method: 'landing_page_hero_wa' })}
                                 className="inline-flex items-center justify-center px-10 py-5 bg-rose-600 text-white font-black rounded-2xl hover:bg-rose-700 transition-all shadow-xl shadow-rose-200 dark:shadow-rose-900/20"
                             >
                                 Buat Landing Page Sekarang
@@ -106,12 +108,13 @@ export default function LandingPageService() {
                         <div className="md:w-1/2 relative">
                             <div className="bg-rose-600 p-12 rounded-[3.5rem] shadow-2xl relative z-10">
                                 <h3 className="text-3xl font-bold mb-6">Paket Landing Page Ekspres</h3>
-                                <div className="text-5xl font-black mb-8">Start From Rp 1.XXX.XXX</div>
+                                <div className="text-5xl font-black mb-8">Start From Rp 1,5 jt</div>
                                 <p className="mb-10 text-rose-100">
                                     Selesai dalam 2-3 hari kerja. Sudah termasuk Domain, Hosting, & Setup WhatsApp.
                                 </p>
                                 <Link
                                     href="https://wa.me/6289678386070"
+                                    onClick={() => fbEvent('Lead', { method: 'landing_page_package_wa' })}
                                     className="block w-full text-center px-8 py-4 bg-white text-rose-600 font-bold rounded-xl hover:bg-slate-100 transition-all font-bold uppercase tracking-wider"
                                 >
                                     Ambil Slot Sekarang
@@ -135,6 +138,7 @@ export default function LandingPageService() {
                     </p>
                     <Link
                         href="https://wa.me/6289678386070"
+                        onClick={() => fbEvent('Lead', { method: 'landing_page_footer_wa' })}
                         className="inline-flex items-center px-12 py-5 bg-rose-600 text-white font-black rounded-2xl shadow-xl hover:-translate-y-1 transition-all uppercase tracking-widest text-sm"
                     >
                         Hubungi Spesialis Landing Page

@@ -3,6 +3,7 @@
 import { Check, MessageSquare, Code2, Cpu, Globe2, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { fbEvent } from './FacebookPixel';
 
 export default function PricingSection() {
     const benefits = [
@@ -53,7 +54,7 @@ export default function PricingSection() {
                                     <div className="inline-block">
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Mulai dari</span>
-                                            <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 999Rb</span>
+                                            <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 1,5 jt</span>
                                         </div>
                                         <p className="text-gray-500 dark:text-gray-400 font-medium mt-2 text-sm">Budget fleksibel sesuai kompleksitas fitur yang Anda inginkan.</p>
                                     </div>
@@ -77,7 +78,8 @@ export default function PricingSection() {
 
                                     <div className="pt-6">
                                         <Link
-                                            href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20proyek%20custom%20website%20dengan%20budget%20mulai%20999rb"
+                                            href="https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20konsultasi%20proyek%20custom%20website%20dengan%20budget%20mulai%201,5%20jt"
+                                            onClick={() => fbEvent('Lead', { method: 'pricing_section_wa' })}
                                             className="inline-flex items-center gap-4 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-xl shadow-blue-600/20 active:scale-95 group/btn"
                                         >
                                             <MessageSquare className="w-5 h-5 group-hover/btn:rotate-12 transition-transform" />

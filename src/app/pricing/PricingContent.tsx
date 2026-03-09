@@ -3,6 +3,7 @@
 import { Check, MessageSquare, Code2, Cpu, Globe2, Sparkles, Zap, Smartphone, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { fbEvent } from '@/components/FacebookPixel';
 
 export default function PricingContent() {
     const benefits = [
@@ -22,7 +23,7 @@ export default function PricingContent() {
         },
         {
             title: "Penawaran",
-            desc: "Kami berikan estimasi biaya transparan mulai dari 999rb saja.",
+            desc: "Kami berikan estimasi biaya transparan mulai dari 1,5 jt saja.",
             icon: Sparkles
         },
         {
@@ -82,7 +83,7 @@ export default function PricingContent() {
                             <div className="mb-10">
                                 <div className="flex items-baseline gap-3 mb-4">
                                     <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Harga Mulai</span>
-                                    <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 999rb</span>
+                                    <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 1,5 jt</span>
                                 </div>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">Bebas request fitur, tampilan, dan integrasi apapun.</p>
                             </div>
@@ -99,7 +100,8 @@ export default function PricingContent() {
                             </div>
 
                             <Link
-                                href="https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20layanan%20custom%20website%20mulai%20999rb"
+                                href="https://wa.me/6289678386070?text=Halo,%20saya%20tertarik%20dengan%20layanan%20custom%20website%20mulai%201,5%20jt"
+                                onClick={() => fbEvent('Lead', { method: 'pricing_page_wa' })}
                                 className="flex items-center justify-center md:inline-flex gap-3 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-2xl shadow-blue-600/30 active:scale-95 group"
                             >
                                 <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform" />

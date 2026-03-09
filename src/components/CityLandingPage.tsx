@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import PortfolioSection from '@/components/PortfolioSection';
 import PricingSection from '@/components/PricingSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import { fbEvent } from './FacebookPixel';
 
 const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -66,7 +67,7 @@ export default function CityLandingPage({ city, areas }: CityLandingPageProps) {
                             <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
                                 Jasa Pembuatan Website {city} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                                    Mulai Rp 999.000 Terima Jadi
+                                    Mulai Rp 1,5 jt Terima Jadi
                                 </span>
                             </h1>
                             <p className="text-xl text-slate-300 mb-12 leading-relaxed">
@@ -76,7 +77,11 @@ export default function CityLandingPage({ city, areas }: CityLandingPageProps) {
                                 <Link href="#portfolio" className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-blue-500/20 active:scale-95">
                                     Lihat Portofolio <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
-                                <Link href={`https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20buat%20website%20di%20${city}`} className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl flex items-center justify-center transition-all backdrop-blur-xl">
+                                <Link
+                                    href={`https://wa.me/6289678386070?text=Halo,%20saya%20ingin%20buat%20website%20di%20${city}`}
+                                    onClick={() => fbEvent('Lead', { method: 'city_hero_wa', city: city })}
+                                    className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-black rounded-2xl flex items-center justify-center transition-all backdrop-blur-xl"
+                                >
                                     Konsultasi Gratis
                                 </Link>
                             </div>
@@ -245,7 +250,11 @@ export default function CityLandingPage({ city, areas }: CityLandingPageProps) {
                         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px] -mr-48 -mt-48"></div>
                         <h3 className="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Optimalkan Seluruh Potensi Online Pada Bisnis Anda Sekarang!</h3>
                         <p className="text-blue-100 mb-12 text-xl max-w-2xl mx-auto">Kami hadir di sini untuk membantu Anda mengoptimalkannya!</p>
-                        <Link href="https://wa.me/6289678386070" className="px-12 py-5 bg-white text-blue-700 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all inline-block uppercase tracking-widest text-sm">
+                        <Link
+                            href="https://wa.me/6289678386070"
+                            onClick={() => fbEvent('Lead', { method: 'city_footer_wa', city: city })}
+                            className="px-12 py-5 bg-white text-blue-700 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all inline-block uppercase tracking-widest text-sm"
+                        >
                             Mulai Sekarang
                         </Link>
                     </div>

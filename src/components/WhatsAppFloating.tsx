@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { fbEvent } from './FacebookPixel';
 
 export default function WhatsAppFloating() {
     return (
@@ -15,6 +16,7 @@ export default function WhatsAppFloating() {
                 href="https://wa.me/6289678386070"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => fbEvent('Lead', { method: 'floating_wa' })}
                 className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20ba5a] transition-all hover:scale-110 active:scale-95"
             >
                 {/* Pulsing Aura */}
