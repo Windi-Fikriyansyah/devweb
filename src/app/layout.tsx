@@ -38,6 +38,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    other: {
+      "facebook-domain-verification": "yvvxsf8fj38f6tgf9disctnfzhk1mc",
+    },
+  },
 };
 
 export default function RootLayout({
