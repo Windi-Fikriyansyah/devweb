@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/services/company-profile",
     "/services/landing-page",
+    "/jasa-pembuatan-website",
+    "/jasa-pembuatan-website-toko-online",
+    "/jasa-website-ekspor",
+    "/jasa-pembuatan-aplikasi-pontianak",
     "/jasa-pembuatan-website-pontianak",
     "/jasa-pembuatan-website-sambas",
     "/jasa-pembuatan-website-landak",
@@ -26,10 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/jasa-pembuatan-website-melawi",
     "/jasa-pembuatan-website-kubu-raya",
     "/jasa-pembuatan-website-singkawang",
-    "/jasa-toko-online-pontianak",
-    "/jasa-website-ekspor-pontianak",
-    "/jasa-pembuatan-aplikasi-pontianak",
-    "/jasa-pembuatan-website-toko-online",
   ];
 
   return routes.map((route) => ({

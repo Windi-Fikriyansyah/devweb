@@ -38,7 +38,7 @@ export default function ExportLandingPageContent() {
                     >
                         <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold uppercase tracking-widest mb-8">
                             <Globe className="w-4 h-4" />
-                            <span>Pontianak to Global Market</span>
+                            <span>Indonesia to Global Market</span>
                         </div>
                         <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1]">
                             Website Ekspor <br />
@@ -67,7 +67,7 @@ export default function ExportLandingPageContent() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { t: "Isu Kecepatan (Latency)", d: "Server lokal Indonesia lambat diakses dari Eropa/Amerika. Kami gunakan Global CDN." },
+                            { t: "Isu Kecepatan (Latency)", d: "Server harus cepat diakses dari Eropa/Amerika. Kami gunakan Global CDN untuk performa maksimal." },
                             { t: "Desain Berantakan", d: "Tampilan yang tidak profesional menurunkan 'Trust Score' bisnis Anda dalam 3 detik." },
                             { t: "Informasi Tidak Jelas", d: "Integrasi katalog produk & sertifikasi yang tidak standar membuat buyer ragu." }
                         ].map((item, i) => (

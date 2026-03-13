@@ -19,7 +19,7 @@ const fadeUp = {
 export default function GeneralLandingPageContent() {
     const niches = [
         { title: "Kesehatan", items: ["Apotek", "Klinik Pratama", "Dokter Mandiri", "Lainnya"] },
-        { title: "Kuliner", items: ["Kafe & Resto", "Catering", "Oleh-oleh Pontianak", "Lainnya"] },
+        { title: "Kuliner", items: ["Kafe & Resto", "Catering", "Makanan Khas", "Lainnya"] },
         { title: "Jasa", items: ["Sedot WC", "Laundry", "Bengkel Mobil", "Lainnya"] },
         { title: "Profesional", items: ["Kantor Hukum", "Notaris", "Konsultan Pajak", "Lainnya"] }
     ];
@@ -38,16 +38,16 @@ export default function GeneralLandingPageContent() {
                     >
                         <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-sm font-bold uppercase tracking-widest mb-8">
                             <MapPin className="w-4 h-4" />
-                            <span>Solusi Digital Lokal Pontianak</span>
+                            <span>Solusi Digital UMKM Indonesia</span>
                         </div>
                         <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
                             Website Cepat, <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-                                Omzet Lokal Meningkat.
+                                Bisnis Makin Melesat.
                             </span>
                         </h1>
                         <p className="text-xl text-pink-100/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Jangan biarkan pelanggan di Pontianak menemukan kompetitor Anda duluan. Kami buatkan website yang ramah Google Maps dan mudah ditemukan warga lokal.
+                            Jangan biarkan pelanggan kesulitan menemukan bisnis Anda. Kami buatkan website yang profesional, cepat, dan mudah ditemukan calon pelanggan Anda.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-6">
                             <Link href="https://wa.me/6289678386070" className="px-10 py-5 bg-pink-600 hover:bg-pink-700 text-white font-black rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-pink-500/20 active:scale-95">
@@ -96,8 +96,8 @@ export default function GeneralLandingPageContent() {
                         </motion.div>
                         <div className="relative">
                             <div className="bg-gradient-to-br from-pink-600 to-rose-700 p-12 rounded-[3.5rem] text-white shadow-2xl relative z-10">
-                                <h3 className="text-3xl font-black mb-8 italic uppercase tracking-tighter">Local SEO Power</h3>
-                                <p className="text-lg mb-8 text-pink-100">Optimasi khusus untuk kata kunci lokal:<br />&quot;Jasa [Bisnis Anda] di Pontianak&quot;</p>
+                                <h3 className="text-3xl font-black mb-8 italic uppercase tracking-tighter">Digital Growth</h3>
+                                <p className="text-lg mb-8 text-pink-100">Optimasi khusus untuk visibilitas maksimal:<br />&quot;Jasa [Bisnis Anda] Terbaik&quot;</p>
                                 <ul className="space-y-4">
                                     {["Integrasi Google Maps", "Schema Markup Alamat", "Mobile Friendly Score 90+", "Kecepatan Akses Instan"].map(item => (
                                         <li key={item} className="flex items-center gap-3 font-bold">
@@ -146,7 +146,7 @@ export default function GeneralLandingPageContent() {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { i: Clock, t: "Proses Kilat", d: "Selesai dalam 5-7 hari kerja untuk paket standard." },
+                            { i: Clock, t: "Proses Kilat", d: "Selesai dalam 3-7 hari kerja untuk paket standard." },
                             { i: DollarSign, t: "Harga Terjangkau", d: "Investasi mulai dari Rp 1,5 jt termasuk Domain & Hosting." },
                             { i: Layers, t: "Mudah Dikelola", d: "Kami ajarkan cara ganti konten sendiri tanpa perlu IT." }
                         ].map((v, idx) => (
@@ -190,10 +190,10 @@ export default function GeneralLandingPageContent() {
             {/* CTA Final */}
             <section className="py-20 bg-pink-600 text-white overflow-hidden relative">
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-black mb-8 italic italic uppercase tracking-tighter">Dominasi Pasar Pontianak Sekarang</h2>
-                    <p className="text-pink-100 mb-12 text-xl max-w-2xl mx-auto">Konsultasi gratis, bisa ketemuan di kafe sekitaran Pontianak untuk bahas project Anda!</p>
+                    <h2 className="text-3xl md:text-5xl font-black mb-8 italic italic uppercase tracking-tighter">Dominasi Pasar Sekarang</h2>
+                    <p className="text-pink-100 mb-12 text-xl max-w-2xl mx-auto">Konsultasi gratis untuk membantu akselerasi pertumbuhan bisnis Anda ke level berikutnya!</p>
                     <Link href="https://wa.me/6289678386070" className="px-12 py-5 bg-white text-pink-700 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all inline-flex items-center uppercase tracking-widest text-sm">
-                        Hubungi Tim JasaWeb Sekarang
+                        Hubungi Tim Webkite Sekarang
                     </Link>
                 </div>
             </section>
