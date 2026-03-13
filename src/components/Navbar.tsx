@@ -30,7 +30,7 @@ const navItems: NavItem[] = [
         href: '#',
         dropdown: [
             { name: 'Umum', items: [{ name: 'Company Profile', href: '/services/company-profile' }, { name: 'Landing Page', href: '/services/landing-page' }] },
-            { name: 'Spesialis', items: [{ name: 'Website Ekspor & Supplier', href: '/jasa-website-ekspor-pontianak' }, { name: 'Website Toko Online (E-commerce)', href: '/jasa-toko-online-pontianak' }] },
+            { name: 'Spesialis', items: [{ name: 'Website Ekspor & Supplier', href: '/jasa-website-ekspor' }, { name: 'Website Toko Online (E-commerce)', href: '/jasa-pembuatan-website-toko-online' }] },
         ]
     },
     { name: 'Portfolio', href: '/portfolio' },

@@ -13,7 +13,7 @@ export default function Footer() {
                             <span>Webkite</span>
                         </Link>
                         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm">
-                            Bantu UMKM dan Perusahaan di Pontianak Go-Digital dengan website yang cepat, elegan, dan menghasilkan penjualan. Partner digital terpercaya Anda.
+                            Bantu UMKM dan Perusahaan di Indonesia Go-Digital dengan website yang cepat, elegan, dan menghasilkan penjualan. Partner digital terpercaya Anda.
                         </p>
                         {/* <div className="flex space-x-4">
                             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -28,9 +28,9 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">Layanan Kami</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/jasa-website-ekspor-pontianak" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Website Ekspor</Link></li>
-                            <li><Link href="/jasa-toko-online-pontianak" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Toko Online</Link></li>
-                            <li><Link href="/jasa-pembuatan-website-pontianak" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Website Bisnis Umum</Link></li>
+                             <li><Link href="/jasa-website-ekspor" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Website Ekspor</Link></li>
+                            <li><Link href="/jasa-pembuatan-website-toko-online" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Toko Online</Link></li>
+                            <li><Link href="/jasa-pembuatan-website" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors">Website Bisnis Umum</Link></li>
                         </ul>
                     </div>
 

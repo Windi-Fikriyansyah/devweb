@@ -17,7 +17,7 @@ export default function HomeContent() {
     const faqs = [
         {
             q: "Berapa lama proses pembuatan website?",
-            a: "Tergantung tingkat kerumitan, rata-rata 7-14 hari kerja untuk hasil yang maksimal."
+            a: "Tergantung tingkat kerumitan, rata-rata 3-7 hari kerja untuk hasil yang maksimal."
         },
         {
             q: "Apakah saya bisa mengelola website sendiri nanti?",
@@ -25,7 +25,7 @@ export default function HomeContent() {
         },
         {
             q: "Apakah website sudah termasuk SEO?",
-            a: "Ya, kami melakukan optimasi SEO dasar agar website Anda mulai merangkak naik di pencarian Google, terutama untuk kata kunci lokal Pontianak."
+            a: "Ya, kami melakukan optimasi SEO dasar agar website Anda mulai merangkak naik di pencarian Google, terutama untuk kata kunci bisnis Anda."
         },
     ];
 
@@ -39,13 +39,13 @@ export default function HomeContent() {
                     <div>
                         <div className="inline-flex items-center px-4 py-2 mb-8 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-semibold tracking-wide uppercase">
                             <span className="w-2 h-2 mr-2 bg-blue-600 rounded-full animate-pulse"></span>
-                            Partner Digital Kreatif Anda di Pontianak
+                            Partner Digital Kreatif Anda di Indonesia
                         </div>
                         <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
-                            Jasa Pembuatan Website Profesional di <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-700 dark:from-blue-500 dark:to-purple-500">Pontianak</span> – Hadirkan Bisnis Anda di Halaman 1 Google.
+                            Jasa Pembuatan Website Profesional di <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-700 dark:from-blue-500 dark:to-purple-500">Indonesia</span> – Hadirkan Bisnis Anda di Halaman 1 Google.
                         </h1>
                         <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-                            Bantu UMKM dan Perusahaan di Pontianak Go-Digital dengan website yang cepat, elegan, dan menghasilkan penjualan. <strong>Bisa ketemuan langsung untuk konsultasi!</strong>
+                            Bantu UMKM dan Perusahaan di Seluruh Indonesia Go-Digital dengan website yang cepat, elegan, dan menghasilkan penjualan. <strong>Konsultasi strategis untuk pertumbuhan bisnis Anda!</strong>
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link
@@ -91,7 +91,7 @@ export default function HomeContent() {
                     <h2 className="sr-only">Keunggulan Layanan Kami</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-900 dark:text-white">
                         {[
-                            { title: "Bisa Ketemuan Langsung", icon: MapPin, color: "blue", desc: "Kami asli orang Pontianak. Siap diajak ngopi atau datang ke toko Anda untuk diskusi strategi jualan online yang pas buat bisnis Anda." },
+                            { title: "Konsultasi Strategis", icon: MapPin, color: "blue", desc: "Kami siap berdiskusi secara online maupun offline untuk membantu merancang strategi jualan online yang paling tepat untuk bisnis Anda." },
                             { title: "Tetap Rapi di HP Jadul", icon: Smartphone, color: "green", desc: "Website Anda tetap cantik dan mudah dibaca meski dibuka dari HP lama sekalipun. Tombol pas di jempol, tulisan jelas terbaca." },
                             { title: "Gampang Dicari di Google", icon: Rocket, color: "purple", desc: "Kami bantu website Anda muncul saat orang cari produk Anda di Google. Makin gampang ditemukan, makin banyak orang yang mampir." }
                         ].map((prop, i) => (
@@ -127,10 +127,10 @@ export default function HomeContent() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
                         {[
-                            { title: "Profil Bisnis", icon: Monitor, color: "blue", desc: "Bikin usaha Anda terlihat profesional di internet. Cocok untuk jasa, kantor, atau bengkel.", href: "/jasa-pembuatan-website-pontianak" },
-                            { title: "Toko Online", icon: Smartphone, color: "purple", desc: "Jualan otomatis 24 jam. Biarkan sistem yang hitung ongkir dan terima pembayaran sementara Anda fokus kirim barang.", href: "/jasa-toko-online-pontianak" },
-                            { title: "Pasar Luar Negeri", icon: Globe, color: "green", desc: "Website khusus untuk ekspor. Menggunakan bahasa Inggris dan sudah diatur supaya bos-bos di luar negeri bisa nemuin Anda.", href: "/jasa-website-ekspor-pontianak" },
-                            { title: "Halaman Promosi", icon: Zap, color: "pink", desc: "Website satu halaman yang fokus buat jualan barang cepat laku. Cocok banget buat dipasang di iklan FB atau TikTok.", href: "/services" }
+                            { title: "Profil Bisnis", icon: Monitor, color: "blue", desc: "Bikin usaha Anda terlihat profesional di internet. Cocok untuk jasa, kantor, atau bengkel.", href: "/services/company-profile" },
+                            { title: "Toko Online", icon: Smartphone, color: "purple", desc: "Jualan otomatis 24 jam. Biarkan sistem yang hitung ongkir dan terima pembayaran sementara Anda fokus kirim barang.", href: "/jasa-pembuatan-website-toko-online" },
+                            { title: "Pasar Luar Negeri", icon: Globe, color: "green", desc: "Website khusus untuk ekspor. Menggunakan bahasa Inggris dan sudah diatur supaya bos-bos di luar negeri bisa nemuin Anda.", href: "/jasa-website-ekspor" },
+                            { title: "Halaman Promosi", icon: Zap, color: "pink", desc: "Website satu halaman yang fokus buat jualan barang cepat laku. Cocok banget buat dipasang di iklan FB atau TikTok.", href: "/services/landing-page" }
                         ].map((service, i) => (
                             <div key={i} className="p-8 bg-gray-50 dark:bg-zinc-900/50 rounded-3xl border border-gray-100 dark:border-zinc-800 hover:border-blue-500/50 transition-all group">
                                 <div className={`w-12 h-12 bg-${service.color}-100 dark:bg-${service.color}-900/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
