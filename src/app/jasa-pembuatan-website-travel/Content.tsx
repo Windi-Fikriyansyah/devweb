@@ -75,17 +75,17 @@ export default function TravelLandingContent() {
                                 Jadi Mesin Booking Otomatis
                             </span>
                         </h1>
-                        <p className="text-lg md:text-xl text-teal-100/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-base sm:text-lg md:text-xl text-teal-100/70 mb-8 max-w-3xl mx-auto leading-relaxed">
                             Buktikan profesionalitas agen travel Anda dengan website modern yang estetik,
                             mobile-friendly, dan mudah ditemukan di Google.
                         </p>
 
                         <div className="bg-white/10 backdrop-blur-md border border-white/20 inline-block px-6 py-3 rounded-2xl mb-10">
                             <p className="text-teal-200 font-bold mb-1 uppercase tracking-tighter text-sm">Promo Harga Spesial</p>
-                            <div className="text-3xl md:text-4xl font-black text-white flex items-center justify-center gap-2">
-                                <span className="text-xl text-white/60 font-medium">Mulai</span>
+                            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white flex flex-wrap items-center justify-center gap-2">
+                                <span className="text-lg sm:text-xl text-white/60 font-medium">Mulai</span>
                                 800 Ribu
-                                <span className="text-xs bg-emerald-500 text-white px-2 py-1 rounded-lg ml-2 animate-pulse text-nowrap">SEKALI BAYAR</span>
+                                <span className="text-[10px] sm:text-xs bg-emerald-500 text-white px-2 py-1 rounded-lg animate-pulse">SEKALI BAYAR</span>
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@ export default function TravelLandingContent() {
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
                             Agen Travel Tanpa Website <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 text-nowrap">Bagaikan Kapal Tanpa Layar</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">Bagaikan Kapal Tanpa Layar</span>
                         </h2>
                         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                             Di tahun 2026, pelanggan mencari paket liburan lewat Google. Jika Anda tidak ada di sana, Anda sedang memberikan pelanggan Anda kepada kompetitor.
@@ -224,7 +224,7 @@ export default function TravelLandingContent() {
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
                             Layanan Tanpa Kompromi
                         </h2>
-                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed text-nowrap">
+                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                             Website travel Anda akan dilengkapi dengan fitur-fitur modern:
                         </p>
                     </motion.div>
@@ -240,7 +240,7 @@ export default function TravelLandingContent() {
                                 <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-xl flex items-center justify-center mb-6 text-teal-600 transition-transform group-hover:scale-110">
                                     <item.i className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-lg font-black mb-3 text-nowrap text-slate-900 dark:text-white">{item.t}</h3>
+                                <h3 className="text-lg font-black mb-3 text-slate-900 dark:text-white">{item.t}</h3>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.d}</p>
                             </motion.div>
                         ))}
@@ -278,7 +278,7 @@ export default function TravelLandingContent() {
             {/* Proses Kerja */}
             <section className="py-24 bg-gradient-to-br from-teal-950 to-blue-950 text-white">
                 <div className="container mx-auto px-4">
-                    <motion.div {...fadeUp} className="text-center mb-20 text-nowrap">
+                    <motion.div {...fadeUp} className="text-center mb-20">
                         <h2 className="text-3xl md:text-5xl font-black mb-6">4 Langkah Punya Website</h2>
                         <p className="text-teal-200/70 text-lg">Hanya butuh beberapa hari untuk agen Anda go digital.</p>
                     </motion.div>
@@ -312,11 +312,11 @@ export default function TravelLandingContent() {
                         <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-teal-500/10 text-teal-600 text-sm font-black uppercase tracking-widest mb-8 border border-teal-500/20">
                             TUNGGU APA LAGI?
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
+                        <h2 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
                             Bawa Bisnis Travel Anda <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 text-nowrap">Ke Level Berikutnya</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">Ke Level Berikutnya</span>
                         </h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
                             Dapatkan penawaran terbaik hanya hari ini. Website travel profesional, cepat,
                             dan siap mendatangkan banyak orderan.
                         </p>
