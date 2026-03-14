@@ -23,7 +23,7 @@ export default function PricingContent() {
         },
         {
             title: "Penawaran",
-            desc: "Kami berikan estimasi biaya transparan mulai dari 1,5 jt saja.",
+            desc: "Kami berikan estimasi biaya transparan mulai dari 800 Ribu saja.",
             icon: Sparkles
         },
         {
@@ -83,7 +83,7 @@ export default function PricingContent() {
                             <div className="mb-10">
                                 <div className="flex items-baseline gap-3 mb-4">
                                     <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Harga Mulai</span>
-                                    <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 1,5 jt</span>
+                                    <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 800 Ribu</span>
                                 </div>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">Bebas request fitur, tampilan, dan integrasi apapun.</p>
                             </div>

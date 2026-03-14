@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/jasa-pembuatan-website",
     "/jasa-pembuatan-website-toko-online",
     "/jasa-website-ekspor",
+    "/jasa-pembuatan-website-travel",
     "/jasa-pembuatan-aplikasi-pontianak",
     "/jasa-pembuatan-website-pontianak",
     "/jasa-pembuatan-website-sambas",

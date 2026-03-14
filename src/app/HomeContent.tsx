@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     ArrowRight, CheckCircle2, Globe, Smartphone, Monitor, Star,
-    Rocket, Zap, MapPin, ChevronDown, ChevronLeft, ChevronRight
+    Rocket, Zap, MapPin, ChevronDown, ChevronLeft, ChevronRight, Compass
 } from 'lucide-react';
 import PortfolioSection from '@/components/PortfolioSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -130,6 +130,7 @@ export default function HomeContent() {
                             { title: "Profil Bisnis", icon: Monitor, color: "blue", desc: "Bikin usaha Anda terlihat profesional di internet. Cocok untuk jasa, kantor, atau bengkel.", href: "/services/company-profile" },
                             { title: "Toko Online", icon: Smartphone, color: "purple", desc: "Jualan otomatis 24 jam. Biarkan sistem yang hitung ongkir dan terima pembayaran sementara Anda fokus kirim barang.", href: "/jasa-pembuatan-website-toko-online" },
                             { title: "Pasar Luar Negeri", icon: Globe, color: "green", desc: "Website khusus untuk ekspor. Menggunakan bahasa Inggris dan sudah diatur supaya bos-bos di luar negeri bisa nemuin Anda.", href: "/jasa-website-ekspor" },
+                            { title: "Website Travel", icon: Compass, color: "teal", desc: "Tingkatkan booking paket tour dengan website travel estetik. Lengkap dengan itinerary dan booking via WhatsApp.", href: "/jasa-pembuatan-website-travel" },
                             { title: "Halaman Promosi", icon: Zap, color: "pink", desc: "Website satu halaman yang fokus buat jualan barang cepat laku. Cocok banget buat dipasang di iklan FB atau TikTok.", href: "/services/landing-page" }
                         ].map((service, i) => (
                             <div key={i} className="p-8 bg-gray-50 dark:bg-zinc-900/50 rounded-3xl border border-gray-100 dark:border-zinc-800 hover:border-blue-500/50 transition-all group">

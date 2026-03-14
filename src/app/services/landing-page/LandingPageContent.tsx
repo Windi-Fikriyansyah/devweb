@@ -104,7 +104,7 @@ export default function LandingPageContent() {
                         <div className="md:w-1/2 relative">
                             <div className="bg-rose-600 p-12 rounded-[3.5rem] shadow-2xl relative z-10">
                                 <h3 className="text-3xl font-bold mb-6">Paket Landing Page Ekspres</h3>
-                                <div className="text-5xl font-black mb-8">Start From Rp 1,5 jt</div>
+                                <div className="text-5xl font-black mb-8">Start From Rp 800 Ribu</div>
                                 <p className="mb-10 text-rose-100">
                                     Selesai dalam 2-3 hari kerja. Sudah termasuk Domain, Hosting, & Setup WhatsApp.
                                 </p>

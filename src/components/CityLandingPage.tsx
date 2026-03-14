@@ -67,7 +67,7 @@ export default function CityLandingPage({ city, areas }: CityLandingPageProps) {
                             <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
                                 Jasa Pembuatan Website {city} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                                    Mulai Rp 1,5 jt Terima Jadi
+                                    Mulai Rp 800 Ribu Terima Jadi
                                 </span>
                             </h1>
                             <p className="text-xl text-slate-300 mb-12 leading-relaxed">

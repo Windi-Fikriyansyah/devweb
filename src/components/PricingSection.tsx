@@ -54,7 +54,7 @@ export default function PricingSection() {
                                     <div className="inline-block">
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">Mulai dari</span>
-                                            <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 1,5 jt</span>
+                                            <span className="text-4xl md:text-5xl font-black text-blue-600 tracking-tighter">Rp 800 Ribu</span>
                                         </div>
                                         <p className="text-gray-500 dark:text-gray-400 font-medium mt-2 text-sm">Budget fleksibel sesuai kompleksitas fitur yang Anda inginkan.</p>
                                     </div>
